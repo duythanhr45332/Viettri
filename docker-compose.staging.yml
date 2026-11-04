@@ -1,0 +1,49 @@
+services:
+  wordpress:
+    build:
+      context: .
+      dockerfile: Dockerfile.wordpress
+    container_name: viettri_wordpress_staging
+    restart: always
+    ports:
+      - "3036:80" # Đã đổi port cho WordPress (CMC là 3031, VietTri có thể là 3036, bạn báo DevOps check lại nhé)
+    environment:
+      WORDPRESS_DB_HOST: 192.168.1.227:33063
+      WORDPRESS_DB_USER: titanplan
+      WORDPRESS_DB_PASSWORD: H4NHtUmewE8EdXTf
+      WORDPRESS_DB_NAME: viettri_db # Hãy đổi tên DB name cho đúng với VietTri
+      WORDPRESS_CONFIG_EXTRA: |
+        define( 'WP_HOME', 'https://viettrilegacylakeside.vn' );
+        define( 'WP_SITEURL', 'https://viettrilegacylakeside.vn' );
+    volumes:
+      - viettri_uploads_staging:/var/www/html/wp-content/uploads
+      - viettri_plugins_staging:/var/www/html/wp-content/plugins
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        NEXT_PUBLIC_WORDPRESS_URL: "https://viettrilegacylakeside.vn/graphql"
+    container_name: viettri_frontend_staging
+    restart: always
+    environment:
+      - NEXT_PUBLIC_WORDPRESS_URL=https://viettrilegacylakeside.vn/graphql
+    depends_on:
+      - wordpress
+
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile.nginx
+    container_name: viettri_nginx_staging
+    restart: always
+    ports:
+      - "3035:80" # Dùng port 3035 cho Nginx (giống với port mà sếp báo lúc nãy)
+    depends_on:
+      - wordpress
+      - frontend
+
+volumes:
+  viettri_uploads_staging:
+    external: true
+  viettri_plugins_staging:
+    external: false

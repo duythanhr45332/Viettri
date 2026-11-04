@@ -1,0 +1,17 @@
+stages:
+  - deploy
+
+deploy_staging:
+  stage: deploy
+  image: 
+    name: docker:latest
+    pull_policy: [if-not-present, always]
+  tags:
+    - viettri.dev
+  only:
+    - beta # Nhánh deploy lên môi trường staging
+  script:
+    - echo "Deploying to Staging Environment..."
+    - docker compose -f docker-compose.staging.yml down || true
+    - docker volume create viettri_uploads_staging || true
+    - docker compose -f docker-compose.staging.yml up -d --build

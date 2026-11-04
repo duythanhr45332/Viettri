@@ -1,0 +1,457 @@
+/* Viet Tri Translation Editor - 50/50 Side-by-Side Admin Styles */
+
+.viettri-translations-wrap {
+    max-width: 1400px;
+    margin: 20px 20px 40px 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    color: #1d2327;
+}
+
+/* Header */
+.viettri-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 20px 24px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    border-left: 5px solid #293414;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.viettri-header-brand {
+    display: flex;
+    align-items: center;
+}
+
+.viettri-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1d2327;
+    margin: 0 0 4px 0;
+    line-height: 1.2;
+}
+
+.viettri-subtitle {
+    font-size: 13px;
+    color: #646970;
+    margin: 0;
+}
+
+.viettri-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.viettri-mode-group {
+    display: inline-flex;
+    background: #f0f0f1;
+    padding: 3px;
+    border-radius: 6px;
+    border: 1px solid #dcdcde;
+}
+
+.viettri-mode-btn {
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    background: transparent;
+    color: #50575e;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.viettri-mode-btn.active {
+    background: #ffffff;
+    color: #1d2327;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.viettri-btn-save {
+    background: #293414 !important;
+    border-color: #293414 !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    padding: 6px 20px !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+    transition: background-color 0.2s ease !important;
+}
+
+.viettri-btn-save:hover {
+    background: #3c4c1e !important;
+    border-color: #3c4c1e !important;
+}
+
+/* Alert Banner */
+.viettri-alert {
+    padding: 12px 18px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.viettri-alert.success {
+    background-color: #edfaef;
+    color: #116828;
+    border: 1px solid #c3ebc9;
+}
+
+.viettri-alert.error {
+    background-color: #fcf0f1;
+    color: #b32d2e;
+    border: 1px solid #f7c5c6;
+}
+
+/* Editor Container Box */
+.viettri-editor-box {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e4e7;
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+/* Pages Bar */
+.viettri-pages-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: #fbfbfc;
+    border-bottom: 1px solid #e2e4e7;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.viettri-page-nav {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.viettri-page-btn {
+    padding: 7px 15px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid #dcdcde;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #50575e;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.viettri-page-btn:hover {
+    background: #f0f0f1;
+    color: #1d2327;
+}
+
+.viettri-page-btn.active {
+    background: #293414;
+    color: #ffffff;
+    border-color: #293414;
+}
+
+.viettri-search-wrapper input {
+    padding: 7px 14px;
+    width: 240px;
+    border-radius: 6px;
+    border: 1px solid #c3c4c7;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.viettri-search-wrapper input:focus {
+    border-color: #293414;
+}
+
+/* 50/50 Column Headers Sticky Bar */
+.viettri-columns-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 12px 24px;
+    background: #f6f7f7;
+    border-bottom: 1px solid #e2e4e7;
+    position: sticky;
+    top: 32px;
+    z-index: 10;
+}
+
+.viettri-col-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #2c3338;
+}
+
+.viettri-flag {
+    font-size: 16px;
+    line-height: 1;
+}
+
+/* Dynamic Form Fields Area */
+.viettri-form-fields {
+    padding: 24px;
+}
+
+.viettri-empty-desc {
+    color: #646970;
+    font-style: italic;
+    margin: 0;
+    padding: 20px;
+}
+
+.viettri-section-card {
+    background: #ffffff;
+    border: 1px solid #e2e4e7;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+.viettri-section-header {
+    background: #fbfbfc;
+    padding: 12px 18px;
+    border-bottom: 1px solid #e2e4e7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.viettri-section-title {
+    font-weight: 700;
+    font-size: 14px;
+    color: #1d2327;
+}
+
+.viettri-section-body {
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Individual Field Row */
+.viettri-field-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 16px;
+    border-bottom: 1px dashed #f0f0f1;
+}
+
+.viettri-field-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.viettri-field-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+
+.viettri-label-text {
+    font-weight: 600;
+    color: #50575e;
+}
+
+.viettri-field-key {
+    font-family: SFMono-Regular, Consolas, Monaco, monospace;
+    font-size: 11px;
+    color: #8c8f94;
+}
+
+/* 50/50 Field Split */
+.viettri-field-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.viettri-split-col {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: relative;
+}
+
+.viettri-input-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #646970;
+    margin-bottom: 2px;
+}
+
+.viettri-input,
+.viettri-textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 12px;
+    border: 1px solid #c3c4c7;
+    border-radius: 6px;
+    font-size: 13.5px;
+    line-height: 1.5;
+    background: #ffffff;
+    color: #1d2327;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.viettri-input:focus,
+.viettri-textarea:focus {
+    border-color: #293414;
+    box-shadow: 0 0 0 1px #293414;
+    outline: none;
+}
+
+.viettri-textarea {
+    min-height: 84px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+/* Code Editor 50/50 */
+.viettri-code-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: #fbfbfc;
+    border-bottom: 1px solid #e2e4e7;
+}
+
+.viettri-code-info {
+    font-size: 13px;
+    color: #50575e;
+}
+
+.viettri-code-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.viettri-code-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: 18px 20px;
+    background: #14171a;
+}
+
+.viettri-code-col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.viettri-code-col-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #d4d4d4;
+    font-family: monospace;
+}
+
+#viettri-json-editor-vi,
+#viettri-json-editor-en {
+    width: 100%;
+    height: 520px;
+    font-family: SFMono-Regular, Consolas, Monaco, monospace;
+    font-size: 12.5px;
+    line-height: 1.6;
+    padding: 14px;
+    background: #1e1e1e;
+    color: #e6e6e6;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    tab-size: 2;
+    white-space: pre;
+    overflow-x: auto;
+    box-sizing: border-box;
+}
+
+#viettri-json-editor-vi:focus,
+#viettri-json-editor-en:focus {
+    border-color: #293414;
+    outline: none;
+}
+
+/* Footer Action Bar */
+.viettri-footer-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 16px 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.viettri-footer-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.viettri-footer-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Advanced Settings Box */
+.viettri-advanced-box {
+    background: #ffffff;
+    padding: 16px 20px;
+    border-radius: 8px;
+    border: 1px solid #e2e4e7;
+}
+
+.viettri-advanced-box summary {
+    cursor: pointer;
+    font-size: 13.5px;
+    color: #2c3338;
+}
+
+.viettri-advanced-content {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid #e2e4e7;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 900px) {
+    .viettri-columns-header {
+        display: none;
+    }
+    .viettri-field-split,
+    .viettri-code-split {
+        grid-template-columns: 1fr;
+    }
+}

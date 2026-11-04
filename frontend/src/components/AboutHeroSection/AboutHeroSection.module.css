@@ -1,0 +1,159 @@
+.section {
+  width: 100%;
+  background-color: var(--bg-cream);
+  padding-top: 140px;
+  padding-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+  box-sizing: border-box;
+}
+
+.leftContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 1292px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-playfair), serif;
+  font-size: var(--font-body-medium-size);
+  font-weight: var(--font-body-small-weight);
+  line-height: var(--font-body-medium-line-height);
+  color: var(--text-on-white-body);
+}
+
+.breadcrumbLink {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.breadcrumbLink:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbSeparator {
+  opacity: 0.6;
+}
+
+.breadcrumbCurrent {
+  color: inherit;
+}
+
+.title {
+  font-family: var(--font-zalando), sans-serif;
+  font-size: var(--font-display1-size);
+  font-weight: var(--font-h1-weight);
+  line-height: var(--font-display1-line-height);
+  letter-spacing: var(--font-h1-ls);
+  color: var(--text-on-white-title);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.rightContent {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 0.2s ease;
+}
+
+.rightContent:hover {
+  opacity: 0.8;
+}
+
+.scrollText {
+  font-family: var(--font-playfair), serif;
+  font-size: var(--font-body-large-size);
+  font-weight: var(--font-body-large-weight);
+  line-height: var(--font-body-large-line-height);
+  color: var(--text-on-white-body);
+  white-space: nowrap;
+}
+
+.scrollButton {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--bg-dark-green);
+  color: var(--accent-button-text);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.2s ease;
+}
+
+.rightContent:hover .scrollButton {
+  transform: translateY(3px);
+  background-color: var(--accent-button-bg);
+}
+
+.arrowIcon {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-top: 100px;
+    padding-bottom: 32px;
+  }
+
+  .container {
+    padding: 0 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .leftContent {
+    gap: 12px;
+  }
+
+  .breadcrumb {
+    font-size: var(--font-body-small-size);
+    line-height: var(--font-body-small-line-height);
+  }
+
+  /* H1 on mobile (30/38) keeps "Nơi dòng thời gian" on one line at 393px */
+  .title {
+    font-size: var(--font-h1-size);
+    line-height: var(--font-h1-line-height);
+  }
+
+  .scrollText {
+    font-size: var(--font-body-medium-size);
+    line-height: var(--font-body-medium-line-height);
+  }
+
+  .scrollButton {
+    width: 40px;
+    height: 40px;
+  }
+
+  .rightContent {
+    align-self: flex-start;
+  }
+}

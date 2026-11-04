@@ -1,0 +1,34 @@
+.section {
+  position: sticky;
+  top: min(0px, calc(100vh - 960px));
+  width: 100%;
+  height: 960px;
+  overflow: hidden;
+  z-index: 30;
+}
+
+.desktopWrapper {
+  display: block;
+}
+
+.mobileWrapper {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .desktopWrapper {
+    display: none;
+  }
+  
+  .mobileWrapper {
+    display: block;
+  }
+
+  .section {
+    position: sticky;
+    top: min(0px, calc(100vh - 870px));
+    height: 870px;
+    overflow: hidden;
+    background-color: transparent;
+  }
+}

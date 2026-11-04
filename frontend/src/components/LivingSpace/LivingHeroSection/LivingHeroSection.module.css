@@ -1,0 +1,187 @@
+.section {
+  position: relative;
+  width: 100%;
+  background-color: var(--bg-cream, #f5f0eb);
+  padding-top: 140px;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 40px 60px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-playfair), serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-on-white-body, rgba(36, 36, 36, 0.8));
+}
+
+.breadcrumbLink {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.breadcrumbLink:hover {
+  opacity: 0.7;
+}
+
+.breadcrumbSep {
+  opacity: 0.6;
+}
+
+.breadcrumbCurrent {
+  color: var(--text-on-white-title, #242424);
+  font-weight: 500;
+}
+
+.headerRow {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.title {
+  font-family: var(--font-zalando), sans-serif;
+  font-size: var(--font-display1-size);
+  font-weight: var(--font-h1-weight);
+  line-height: var(--font-display1-line-height);
+  letter-spacing: var(--font-h1-ls);
+  color: var(--text-on-white-title);
+  margin: 0;
+  white-space: pre-line;
+}
+
+.introWrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.intro {
+  font-family: var(--font-playfair), serif;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--text-on-white-body, rgba(36, 36, 36, 0.8));
+  max-width: 494px;
+  margin: 0;
+}
+
+.ornamentRow {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.flourishLeft,
+.flourishRight {
+  flex-shrink: 0;
+  width: 48px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.flourishRight {
+  justify-content: flex-end;
+  transform: scaleX(-1);
+}
+
+.flourishLeft img,
+.flourishRight img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background-color: rgba(36, 36, 36, 0.2);
+}
+
+/* Large Courtyard Visual */
+.visualContainer {
+  position: relative;
+  width: 100%;
+  height: 804px;
+  overflow: hidden;
+}
+
+.visualImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .section {
+    padding-top: 100px;
+  }
+
+  .container {
+    padding: 0 40px 40px;
+    gap: 28px;
+  }
+
+  .intro {
+    max-width: 100%;
+  }
+
+  .visualContainer {
+    height: 560px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-top: 90px;
+  }
+
+  .container {
+    padding: 0 20px 32px;
+    gap: 24px;
+  }
+
+  .breadcrumb {
+    font-size: 14px;
+  }
+
+  .title {
+    font-size: var(--font-h1-size);
+    line-height: var(--font-h1-line-height);
+  }
+
+  .intro {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .ornamentRow {
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .flourishLeft,
+  .flourishRight {
+    width: 36px;
+    height: 21px;
+  }
+
+  .visualContainer {
+    height: 380px;
+  }
+}

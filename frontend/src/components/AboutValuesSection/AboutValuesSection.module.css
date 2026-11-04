@@ -1,0 +1,508 @@
+/* Figma 45:1927 — "Giá trị định hình" (1440 x 1204)
+   + 45:1925 — Frame 110 curve (1440 x 87.86) */
+.section {
+  --values-bg: #411514; /* Figma wine — no matching global token */
+  --title: var(--text-on-green-title);
+  --body: var(--text-on-green-body);
+  --line: var(--divider-on-green);
+  --pad-x: 40px;
+  --curve-h: clamp(40px, 6.1vw, 87.86px);
+
+  position: relative;
+  z-index: 40;
+  width: 100%;
+  /* Wine only below the curve so the corners above the dome stay transparent */
+  background: linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent calc(var(--curve-h) - 1px),
+    var(--values-bg) calc(var(--curve-h) - 1px)
+  );
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* ---------- 45:1925 curve ---------- */
+.topCurveWrapper {
+  position: relative;
+  z-index: 6;
+  width: 100%;
+  height: var(--curve-h);
+  line-height: 0;
+  /* Transparent: the sticky Map section shows through behind the dome while scrolling */
+  background-color: transparent;
+}
+
+.curveSvg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------- Background decor ---------- */
+.bgDecor {
+  position: absolute;
+  bottom: 0;
+  left: 23.96%; /* 345 / 1440 */
+  right: 0;
+  height: 960px;
+  max-height: 80%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.bgDecorImage {
+  object-fit: cover;
+}
+
+.bgDecorGradient {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(270deg, rgba(65, 21, 20, 0) 0%, rgb(65, 21, 20) 100%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0) 61%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+/* Full-width veil: solid wine at top fading to 40% at bottom */
+.bgFade {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 989px;
+  max-height: 85%;
+  background: linear-gradient(180deg, var(--values-bg) 2.6%, rgba(65, 21, 20, 0.4) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* ---------- Layout ---------- */
+.innerContainer {
+  position: relative;
+  z-index: 5;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: clamp(48px, 5.6vw, 80px) var(--pad-x) clamp(72px, 8.3vw, 120px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(36px, 4.2vw, 60px);
+  box-sizing: border-box;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(40px, 12vw, 172px);
+  width: 100%;
+}
+
+.headerLeft {
+  width: 600px;
+  max-width: 45%;
+  flex-shrink: 0;
+}
+
+.headerTitle {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: var(--font-zalando), sans-serif;
+  font-size: var(--font-h2-size);
+  font-weight: var(--font-h2-weight);
+  line-height: var(--font-h2-line-height);
+  letter-spacing: var(--font-h2-ls);
+  color: var(--title);
+}
+
+.headerRight {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.headerNarrative {
+  margin: 0;
+  max-width: 376px;
+  font-family: var(--font-playfair), serif;
+  font-size: var(--font-body-large-size);
+  font-weight: var(--font-body-large-weight);
+  line-height: var(--font-body-large-line-height);
+  color: var(--body);
+}
+
+.visualIconWrapper {
+  flex-shrink: 0;
+  display: flex;
+  /* Figma: rotate(180) + scaleY(-1) = mirrored horizontally */
+  transform: scaleX(-1);
+}
+
+.lotusSvg {
+  width: 46.47px;
+  height: 24px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--line);
+}
+
+/* ---------- Showcase ---------- */
+.showcaseSection {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+.visualRow {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.activeFrame {
+  position: relative;
+  width: clamp(380px, 41.7vw, 600px);
+  aspect-ratio: 1 / 1;
+  flex-shrink: 0;
+  margin-right: clamp(40px, 11.1vw, 160px); /* Figma: pr-160 */
+}
+
+.activeImageWrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.activeImage {
+  object-fit: cover;
+  animation: activeIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes activeIn {
+  from {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Thumbnails bleed past the right padding to the viewport edge */
+.thumbnailsContainer {
+  flex: 1;
+  min-width: 0;
+  margin-right: calc(-1 * var(--pad-x));
+  overflow: hidden;
+}
+
+.thumbnailsTrack {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.thumbnailCard {
+  position: relative;
+  width: clamp(160px, 16.7vw, 240px);
+  aspect-ratio: 1 / 1;
+  flex-shrink: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  overflow: hidden;
+  animation: thumbIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.firstThumb {
+  aspect-ratio: 240 / 280;
+}
+
+@keyframes thumbIn {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.thumbImage {
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.thumbnailCard:hover .thumbImage {
+  transform: scale(1.06);
+}
+
+.thumbOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.45) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.thumbnailCard:hover .thumbOverlay {
+  opacity: 1;
+}
+
+.thumbnailCard:focus-visible {
+  outline: 1px solid var(--title);
+  outline-offset: 3px;
+}
+
+/* ---------- Info row ---------- */
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  width: 100%;
+}
+
+/* All text items share one grid cell -> height = tallest item, no layout jump */
+.activeInfo {
+  display: grid;
+  width: 600px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.infoItem {
+  grid-area: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  opacity: 0;
+  transform: translateY(100%);
+  transition:
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.infoPast {
+  transform: translateY(-100%);
+}
+
+.infoActive {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.itemTitle {
+  margin: 0;
+  font-family: var(--font-zalando), sans-serif;
+  font-size: var(--font-h5-size);
+  font-weight: var(--font-h5-weight);
+  line-height: var(--font-h5-line-height);
+  color: var(--title);
+}
+
+.itemDesc {
+  margin: 0;
+  max-width: 499px;
+  font-family: var(--font-playfair), serif;
+  font-size: var(--font-body-large-size);
+  font-weight: var(--font-body-large-weight);
+  line-height: var(--font-body-large-line-height);
+  color: var(--body);
+}
+
+/* Controls: ← 1/8 → */
+.controlsGroup {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.navBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  border: 1px solid var(--divider-on-green);
+  border-radius: 100px;
+  background: transparent;
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.navBtn svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.navBtn:hover {
+  background-color: rgba(225, 216, 196, 0.1);
+  border-color: var(--text-on-green-body);
+}
+
+.navBtn:active {
+  transform: scale(0.94);
+}
+
+.counter {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  width: 93px;
+  height: 60px;
+  font-family: var(--font-zalando), sans-serif;
+  font-style: italic;
+  color: var(--title);
+  text-align: center;
+}
+
+.currentNum {
+  font-size: var(--font-display1-size);
+  line-height: var(--font-display1-line-height);
+  letter-spacing: var(--font-h3-ls);
+}
+
+.totalNum {
+  font-size: var(--font-h3-size);
+  line-height: var(--font-h3-line-height);
+  color: var(--text-on-green-sub);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .headerLeft {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .headerRight {
+    width: 100%;
+  }
+
+  .visualRow {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .activeFrame {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    margin-right: 0;
+  }
+
+  .thumbnailsContainer {
+    width: calc(100% + var(--pad-x));
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .thumbnailsContainer::-webkit-scrollbar {
+    display: none;
+  }
+
+  .infoRow {
+    flex-direction: column;
+  }
+
+  .controlsGroup {
+    align-self: flex-end;
+  }
+}
+
+/* Mobile — iPhone 16 (393 x 852). Gutter 20px = globals .container */
+@media (max-width: 768px) {
+  .section {
+    --pad-x: 20px;
+  }
+
+  .innerContainer {
+    padding: 40px var(--pad-x) 64px;
+    gap: 28px;
+  }
+
+  .header {
+    gap: 16px;
+  }
+
+  .headerRight {
+    flex-direction: column-reverse;
+    gap: 12px;
+  }
+
+  .lotusSvg {
+    width: 36px;
+    height: 19px;
+  }
+
+  .showcaseSection {
+    gap: 20px;
+  }
+
+  .activeFrame {
+    aspect-ratio: 1 / 1;
+  }
+
+  .thumbnailsTrack {
+    gap: 8px;
+  }
+
+  .thumbnailCard {
+    width: 112px;
+  }
+
+  .infoRow {
+    gap: 16px;
+  }
+
+  .itemDesc {
+    font-size: var(--font-body-medium-size);
+    line-height: var(--font-body-medium-line-height);
+  }
+
+  .controlsGroup {
+    align-self: stretch;
+    justify-content: space-between;
+  }
+
+  .navBtn {
+    padding: 11px;
+  }
+
+  .counter {
+    width: 72px;
+    height: 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .activeImage,
+  .thumbnailCard {
+    animation: none;
+  }
+
+  .infoItem {
+    transition: opacity 0.2s ease;
+  }
+}

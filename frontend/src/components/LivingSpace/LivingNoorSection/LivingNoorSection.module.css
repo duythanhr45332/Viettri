@@ -1,0 +1,385 @@
+/* Figma node 45:2782 — Section_San Pham (1440 wide) */
+.section {
+  /* Figma 45:2783 — Frame 110 is 1440 x 87.864 → 6.1vw, capped at 87.864px */
+  --arc-h: clamp(32px, 6.1vw, 87.864px);
+
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  /* Pull the dome up over the bottom of the previous section (hero photo):
+     the arc's transparent corners reveal the photo behind it */
+  margin-top: calc(-1 * var(--arc-h));
+  overflow: hidden;
+}
+
+/* 45:2783 — Frame 110: cream ellipse (#F5F0EB) on a transparent frame */
+.topArcWrapper {
+  position: relative;
+  width: 100%;
+  height: var(--arc-h);
+  line-height: 0;
+  /* 1px overlap hides the sub-pixel seam with the cream container below */
+  margin-bottom: -1px;
+  /* Giống IntroSection (Home): trước khi chồng, 2 góc vòm phủ kem như Figma */
+  background-color: var(--bg-cream, #f5f0eb);
+  transition: background-color 0.3s ease;
+  pointer-events: none;
+}
+
+/* Khi Noor bắt đầu trượt lên che Hero (StackOnScroll set data-stacking) → góc trong suốt, lộ ảnh Hero */
+:global([data-stacking='true']) .topArcWrapper {
+  background-color: transparent;
+}
+
+/* SVG uses preserveAspectRatio="none" → stretches to the wrapper box */
+.topArcSvg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* 45:2785 — nền cream full-width */
+.body {
+  width: 100%;
+  background-color: var(--bg-cream, #f5f0eb);
+}
+
+/* Giống .container trang Home: max-width var(--max-width), padding 0 40px.
+   Figma: pt 80 / pb 120, gap 20 giữa header và gallery */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 80px 40px 120px;
+  box-sizing: border-box;
+}
+
+/* ---------- Header (45:2788) ---------- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.titleCol {
+  width: 694px;
+  max-width: 55%;
+}
+
+.title {
+  max-width: 536px;
+  margin: 0;
+  font-family: var(--font-zalando), sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 42px;
+  letter-spacing: -0.32px;
+  color: var(--text-on-white-title, #242424);
+  white-space: pre-line;
+}
+
+/* 45:2791 — 436 wide, gap 24 */
+.partnerCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 24px;
+  width: 436px;
+  flex-shrink: 0;
+}
+
+.partnerDesc {
+  width: 100%;
+  margin: 0;
+  font-family: var(--font-playfair), serif;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--text-on-white-body, rgba(36, 36, 36, 0.8));
+}
+
+.partnerDivider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.partnerBranding {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* 45:2795 — 88 x 48 logo box; the logo is an alpha mask filled black */
+.noorLogoBox {
+  position: relative;
+  width: 88px;
+  height: 48px;
+  overflow: hidden;
+}
+
+.noorLogo {
+  position: absolute;
+  left: -22.5px;
+  top: 14.84px;
+  width: 133.184px;
+  height: 21px;
+  background-color: #000;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.partnerTag {
+  margin: 0;
+  font-family: var(--font-playfair), serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--text-on-white-title, #242424);
+}
+
+/* ---------- Gallery (45:2800) ---------- */
+.showcase {
+  display: flex;
+  flex-direction: column;
+}
+
+.itemIndex {
+  margin: 0;
+  font-family: var(--font-zalando), sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--text-on-white-title, #242424);
+  white-space: nowrap;
+}
+
+/* 45:2801 — 639 wide, pl 320, gap 16, overlaps next row by 220 */
+.item1Row {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 16px;
+  width: 639px;
+  padding-left: 320px;
+  margin-bottom: -220px;
+  box-sizing: border-box;
+}
+
+.item1Card {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+.imageBox {
+  position: relative;
+  overflow: hidden;
+}
+
+.item1Image {
+  width: 241px;
+  height: 260px;
+}
+
+/* 45:2809 — justify-between */
+.mainRow {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+/* 45:2810 — 719 wide, pt 340 */
+.item3Card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 719px;
+  max-width: 55%;
+  padding-top: 340px;
+}
+
+.item3Image {
+  width: 100%;
+  height: 499px;
+}
+
+/* 45:2817 — 436 wide */
+.item2Card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 436px;
+  flex-shrink: 0;
+}
+
+.item2Image {
+  width: 100%;
+  height: 538px;
+}
+
+.coverImg {
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.imageBox:hover .coverImg {
+  transform: scale(1.04);
+}
+
+/* left-content — gap 4 */
+.itemInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.itemTitle {
+  margin: 0;
+  font-family: var(--font-zalando), sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  color: var(--text-on-white-title, #242424);
+}
+
+.itemDesc {
+  margin: 0;
+  font-family: var(--font-playfair), serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-on-white-body, rgba(36, 36, 36, 0.8));
+  /* Figma ngắt dòng cố định → \n trong vi.json */
+  white-space: pre-line;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1200px) {
+  .item1Row {
+    width: 50%;
+    padding-left: 8%;
+  }
+
+  .item2Card {
+    width: 38%;
+  }
+
+  .item2Image {
+    height: 460px;
+  }
+
+  .item3Image {
+    height: 420px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding: 60px 40px 80px;
+    gap: 48px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .titleCol,
+  .partnerCol {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .showcase {
+    gap: 48px;
+  }
+
+  .item1Row {
+    width: 100%;
+    padding-left: 0;
+    margin-bottom: 0;
+    justify-content: flex-start;
+  }
+
+  .item1Image {
+    width: 100%;
+    height: 320px;
+  }
+
+  .itemDesc {
+    white-space: normal;
+  }
+
+  .mainRow {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .item3Card,
+  .item2Card {
+    width: 100%;
+    max-width: 100%;
+    padding-top: 0;
+  }
+
+  /* Mobile: thứ tự đọc 01 → 02 → 03 */
+  .item2Card {
+    order: 1;
+  }
+
+  .item3Card {
+    order: 2;
+  }
+
+  .item3Image,
+  .item2Image {
+    height: 360px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 40px 20px 64px;
+  }
+
+  .title {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .partnerDesc {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .item1Row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .item1Image,
+  .item2Image,
+  .item3Image {
+    height: 280px;
+  }
+}

@@ -1,0 +1,13 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="128" height="1425" viewBox="0 0 128 1425" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Handler">
+<path id="line" d="M63.9995 0V1425" stroke="#F5F0EB" stroke-width="6"/>
+<g id="handle">
+<circle id="base" cx="64" cy="713" r="32" fill="#F5F0EB"/>
+<g id="Frame 294">
+<path id="Vector 3" d="M54.6207 706.379L48 713L54.6207 719.621" stroke="black" stroke-width="1.6"/>
+<path id="line_2" opacity="0.12" d="M64.2207 699.207L64.2207 726.793" stroke="black" stroke-width="0.8"/>
+<path id="Vector 2" d="M73.8207 706.379L80.4414 713L73.8207 719.621" stroke="black" stroke-width="1.6"/>
+</g>
+</g>
+</g>
+</svg>

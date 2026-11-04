@@ -1,0 +1,92 @@
+.section {
+  position: relative;
+  z-index: 40;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.curveWrapper {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  transition: background-color 0.3s ease;
+}
+
+.curveWrapperBg {
+  background-color: #182520;
+}
+
+.curveSvg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.mainArea {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Background image with gradients */
+.bgWrapper {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bgImage {
+  object-fit: cover;
+  opacity: 1;
+}
+
+.bgGradientTop {
+  background: linear-gradient(#182520 0%, #18252000 65%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bgGradientBottom {
+  background: linear-gradient(#283312 0%, #283312b3 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.desktopWrapper {
+  display: block;
+  width: 100%;
+}
+
+.mobileWrapper {
+  display: none;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .curveWrapper {
+    height: 24px;
+  }
+  
+  .desktopWrapper {
+    display: none;
+  }
+  
+  .mobileWrapper {
+    display: block;
+  }
+}

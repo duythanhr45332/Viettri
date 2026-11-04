@@ -1,0 +1,60 @@
+.section {
+  position: sticky;
+  top: min(0px, calc(100vh - 960px));
+  z-index: 30;
+  width: 100%;
+  height: 960px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+.bgWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.img {
+  object-fit: cover;
+}
+
+.gradientOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgb(40, 51, 18) 0%, rgba(40, 51, 18, 0) 62.865%), linear-gradient(180deg, rgba(40, 51, 18, 0) 43.094%, rgb(40, 51, 18) 100%);
+  pointer-events: none;
+}
+
+.content {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.desktopWrapper {
+  display: block;
+  position: absolute;
+  inset: 0;
+}
+
+.mobileWrapper {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .desktopWrapper {
+    display: none;
+  }
+  
+  .mobileWrapper {
+    display: block;
+    position: absolute;
+    inset: 0;
+  }
+
+  .img {
+    object-position: right;
+  }
+}

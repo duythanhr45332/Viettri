@@ -1,0 +1,378 @@
+/* Figma node 45:1889 — Slider (1440 x 960) */
+.section {
+  --controls-h: clamp(180px, 24vh, 230px);
+  --line-color: var(--divider-on-green);
+  --pad-x: 40px;
+
+  position: sticky;
+  top: min(0px, calc(100vh - 960px));
+  z-index: 10;
+  width: 100%;
+  width: 100vw;
+  max-width: 100vw;
+  height: 960px;
+  max-height: 100svh;
+  min-height: 650px;
+  overflow: hidden;
+  background-color: var(--bg-dark-green);
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 74.16%, rgba(0, 0, 0, 0.4) 100%);
+  color: var(--text-on-green-title);
+  border-radius: 0 !important;
+  transform: none !important;
+}
+
+/* ---------- Slide track ---------- */
+.track {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.slide {
+  position: relative;
+  flex: 0 0 100%;
+  height: 100%;
+}
+
+.bgWrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.parallax {
+  position: absolute;
+  inset: 0;
+}
+
+.bgImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Per-slide overlays matching Figma node 45:1889 */
+.slideOverlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Slide 1 in Figma: Top subtle shade + bottom signature dark green overlay */
+.slideOverlay0 {
+  background-image:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 18.28%),
+    linear-gradient(180deg, rgba(22, 37, 6, 0) 0%, rgba(13, 24, 2, 0.9) 100%);
+}
+
+/* Slide 2 in Figma: Bottom 74.16% shade */
+.slideOverlay1 {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 74.16%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+/* Figma Rectangle 68 (data-node-id="I45:1889;929:3040"):
+   Bottom 837px (87.2% of 960px height) dark gradient from rgba(0,0,0,0) to rgba(0,0,0,0.8).
+   This provides the deep dark backdrop behind the text so that #e1d8c4 text has perfect contrast. */
+.bottomShade {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: clamp(500px, 87.2%, 837px);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* ---------- Slide body (strictly above background and gradients) ---------- */
+.slideBody {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  height: calc(100% - var(--controls-h));
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.leftCol {
+  width: 800px;
+  max-width: 55%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: clamp(6px, 1.2vh, 12px);
+  padding: clamp(28px, 6vh, 60px) var(--pad-x);
+  box-sizing: border-box;
+}
+
+.slideNum {
+  font-family: var(--font-playfair), serif;
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text-on-green-title);
+}
+
+.slideTitle {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: var(--font-zalando), sans-serif;
+  font-size: var(--font-h2-size);
+  font-weight: var(--font-h2-weight);
+  line-height: var(--font-h2-line-height);
+  letter-spacing: var(--font-h2-ls);
+  color: var(--text-on-green-title);
+}
+
+.verticalDivider {
+  width: 1px;
+  align-self: stretch;
+  background-color: var(--line-color);
+  flex-shrink: 0;
+}
+
+.rightCol {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: clamp(14px, 3vh, 30px);
+  padding: clamp(28px, 6vh, 80px) var(--pad-x);
+  box-sizing: border-box;
+}
+
+.lotusSvg {
+  display: block;
+  width: 46px;
+  height: 24px;
+}
+
+.narrative {
+  margin: 0;
+  max-width: 520px;
+  font-family: var(--font-playfair), serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text-on-green-title);
+}
+
+
+
+.horizontalDivider {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: var(--controls-h);
+  height: 1px;
+  background-color: var(--line-color);
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* ---------- Tabs + progress ---------- */
+.controls {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--pad-x) clamp(44px, 8vh, 40px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 1.8vh, 18px);
+  box-sizing: border-box;
+}
+
+.tabsRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 40px;
+}
+
+.tabBtn {
+  background: none;
+  border: none;
+  padding: 6px 0;
+  cursor: pointer;
+  font-family: var(--font-playfair), serif;
+  font-size: var(--font-body-large-size);
+  font-weight: var(--font-body-large-weight);
+  line-height: var(--font-body-large-line-height);
+  color: var(--text-on-green-title);
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.tabBtn:hover,
+.activeTab {
+  opacity: 1;
+}
+
+.progressTrack {
+  position: relative;
+  height: 4px;
+  background-color: var(--divider-on-dark);
+}
+
+.progressFill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--text-on-green-title);
+  width: 17px;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.navRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.navBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(225, 216, 196, 0.4);
+  background: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  color: var(--text-on-green-title);
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.navBtn:hover {
+  background-color: rgba(225, 216, 196, 0.15);
+  border-color: var(--text-on-green-title);
+  transform: translateY(-1px);
+}
+
+.navBtn:active {
+  transform: scale(0.94);
+}
+
+.navBtn svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .section {
+    --controls-h: 150px;
+  }
+
+  .slideBody {
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .leftCol {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 30px 24px;
+  }
+
+  .verticalDivider {
+    display: none;
+  }
+
+  .rightCol {
+    padding: 0 30px 40px;
+    gap: 20px;
+  }
+
+  .controls {
+    padding: 0 30px 56px;
+  }
+}
+
+/* Mobile — iPhone 16 (393 x 852). Gutter 20px = globals .container */
+@media (max-width: 768px) {
+  .section {
+    --pad-x: 20px;
+    --controls-h: 160px;
+    height: 100svh;
+    min-height: 600px;
+    max-height: none;
+    top: 0;
+  }
+
+  /* Keep number + title + narrative grouped at the bottom of the slide */
+  .rightCol {
+    flex: none;
+    padding: 0 20px 28px;
+    gap: 12px;
+  }
+
+  .leftCol {
+    padding: 0 20px 16px;
+    gap: 4px;
+  }
+
+  .slideNum {
+    font-size: var(--font-h5-size);
+    line-height: var(--font-h5-line-height);
+  }
+
+  .lotusSvg {
+    width: 36px;
+    height: 19px;
+  }
+
+  .narrative {
+    font-size: var(--font-body-large-size);
+    line-height: var(--font-body-large-line-height);
+  }
+
+  .controls {
+    padding: 0 20px calc(24px + env(safe-area-inset-bottom, 0px));
+    gap: 10px;
+  }
+
+  .tabsRow {
+    min-height: 32px;
+  }
+
+  .tabBtn {
+    font-size: var(--font-body-medium-size);
+    line-height: var(--font-body-medium-line-height);
+  }
+
+  .progressTrack {
+    height: 3px;
+  }
+
+  .navRow {
+    margin-top: 4px;
+  }
+
+  .navBtn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .navBtn svg {
+    width: 16px;
+    height: 16px;
+  }
+}

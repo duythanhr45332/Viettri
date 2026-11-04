@@ -1,0 +1,12 @@
+/* Giống .heroSection trang Home: sticky, top = min(0px, 100vh - chiều cao) */
+.base {
+  position: sticky;
+  top: min(0px, calc(100vh - var(--base-h, 100vh)));
+  z-index: 0;
+}
+
+/* Giống IntroSection: nằm trên, trượt lên che base */
+.overlay {
+  position: relative;
+  z-index: 20;
+}

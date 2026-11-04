@@ -1,0 +1,352 @@
+.section {
+  position: relative;
+  width: 100%;
+  background-color: var(--bg-dark-green);
+  padding: 120px 0 48px 0;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* Image and Icons Group */
+.imageGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.iconRow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flipV {
+  transform: scaleY(-1);
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 790px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.overlayContent {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  z-index: 10;
+}
+
+.overlaySubtitle {
+  font-family: var(--font-playfair), serif;
+  font-size: var(--font-body-large-size);
+  font-weight: var(--font-body-large-weight);
+  line-height: var(--font-body-large-line-height);
+  color: var(--text-on-white-title);
+  margin: 0;
+}
+
+.overlayTitle {
+  font-family: var(--font-zalando), sans-serif;
+  font-weight: var(--font-h2-weight);
+  font-size: var(--font-h2-size);
+  line-height: var(--font-h2-line-height);
+  letter-spacing: var(--font-h2-ls);
+  color: var(--text-on-white-title);
+  margin: 0 0 8px 0;
+  text-transform: none;
+}
+
+.overlayButton {
+  background-color: black;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  font-family: var(--font-playfair), serif;
+  font-size: var(--font-button-size);
+  font-weight: var(--font-button-weight);
+  line-height: var(--font-button-line-height);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.overlayButton:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Info Row (2 Cols) */
+.infoRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.infoLeft {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-right: 40px;
+}
+
+.projectInfoTitle {
+  font-family: var(--font-zalando), sans-serif;
+  font-size: var(--font-h6-size);
+  font-weight: var(--font-h6-weight);
+  line-height: var(--font-h6-line-height);
+  color: white;
+  margin: 0;
+}
+
+.disclaimerText {
+  font-family: var(--font-playfair), serif;
+  font-variant-numeric: lining-nums;
+  -webkit-font-feature-settings: "lnum" 1;
+  font-feature-settings: "lnum" 1;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.verticalDivider {
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin: 0 40px;
+}
+
+.infoRight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.iconCircle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contactText {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.contactLabel {
+  font-family: var(--font-playfair), serif;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contactValue {
+  font-family: var(--font-zalando), sans-serif;
+  font-size: var(--font-h6-size);
+  font-weight: var(--font-h6-weight);
+  line-height: var(--font-h6-line-height);
+  color: white;
+}
+
+.mobileBreak {
+  display: none;
+}
+
+/* Divider */
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Logo */
+.logoTextWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.logoText {
+  font-family: var(--font-zalando), sans-serif;
+  font-size: 140px;
+  line-height: 1;
+  color: white;
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 4px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Bottom Bar */
+.bottomBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.copyright {
+  font-family: var(--font-playfair), serif;
+  font-variant-numeric: lining-nums;
+  -webkit-font-feature-settings: "lnum" 1;
+  font-feature-settings: "lnum" 1;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0;
+}
+
+.backToTopWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.backToTopWrapper:hover {
+  opacity: 0.8;
+}
+
+.backToTopLabel {
+  font-family: var(--font-playfair), serif;
+  font-size: 16px;
+  color: white;
+}
+
+.iconCircleOutline {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 1440px) {
+  .logoText {
+    font-size: 110px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .infoRow {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .verticalDivider {
+    width: 100%;
+    height: 1px;
+    margin: 0;
+  }
+
+  .infoLeft,
+  .infoRight {
+    padding-right: 0;
+  }
+
+  .logoText {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 24px 0 48px;
+  }
+
+  .imageWrapper {
+    height: 550px;
+  }
+
+  .overlayContent {
+    width: 80%;
+  }
+
+  .container {
+    padding: 0 20px;
+    gap: 40px;
+  }
+
+  .logoText {
+    font-size: 48px;
+  }
+
+  .bottomBar {
+    gap: 16px;
+    align-items: center;
+  }
+
+  .copyright {
+    flex: 1;
+  }
+
+  .backToTopWrapper {
+    flex: 1;
+    justify-content: flex-end;
+    align-self: auto;
+  }
+
+  .contactValue {
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .mobileBreak {
+    display: block;
+  }
+}
+
+.contactItem:hover .iconCircle {
+  background-color: rgba(255, 255, 255, 0.1);
+}

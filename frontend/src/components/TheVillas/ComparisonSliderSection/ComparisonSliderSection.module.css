@@ -1,0 +1,221 @@
+.sliderSection {
+  position: relative;
+  width: 100%;
+  height: 960px;
+  overflow: hidden;
+  user-select: none;
+  cursor: ew-resize;
+  background-color: #000;
+  outline: none;
+  touch-action: pan-y;
+}
+
+.dragging {
+  cursor: grabbing;
+}
+
+.afterLayer,
+.beforeLayer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Smooth snap animation when user releases drag */
+.sliderSection:not(.dragging) .beforeLayer {
+  transition: clip-path 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sliderSection:not(.dragging) .dividerLine {
+  transition: left 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sliderSection:not(.dragging) .handleWrapper {
+  transition: left 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bgImage {
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* Subtle gradient on top to enhance label readability */
+.topGradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 100%);
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* Typography Labels */
+.leftLabel {
+  position: absolute;
+  top: 60px;
+  left: max(40px, calc((100% - var(--max-width)) / 2 + 40px));
+  max-width: 492px;
+  z-index: 8;
+  color: #ffffff;
+  pointer-events: none;
+}
+
+.rightLabel {
+  position: absolute;
+  top: 60px;
+  right: max(40px, calc((100% - var(--max-width)) / 2 + 40px));
+  max-width: 492px;
+  text-align: right;
+  z-index: 8;
+  color: #ffffff;
+  pointer-events: none;
+}
+
+.labelTitle {
+  font-family: var(--font-zalando, sans-serif);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+.labelSubtitle {
+  font-family: var(--font-zalando, sans-serif);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+/* Divider Handle */
+.handleWrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 56px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  cursor: ew-resize;
+  pointer-events: auto;
+}
+
+.dividerLine {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: none;
+  z-index: 9;
+  pointer-events: none;
+}
+
+.handleKnob {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  color: #242424;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, box-shadow 0.2s ease;
+  z-index: 2;
+}
+
+.handleWrapper:hover .handleKnob,
+.sliderSection.dragging .handleKnob {
+  transform: scale(1.12);
+  background: #ffffff;
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.45);
+}
+
+.chevronIcon {
+  width: 14px;
+  height: 14px;
+  stroke: #242424;
+  transition: stroke 0.2s ease;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .sliderSection {
+    height: 720px;
+  }
+
+  .leftLabel {
+    top: 40px;
+    left: 32px;
+  }
+
+  .rightLabel {
+    top: 40px;
+    right: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sliderSection {
+    height: 540px;
+  }
+
+  .leftLabel,
+  .rightLabel {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .hideLeftOnMobile {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-12px);
+  }
+
+  .hideRightOnMobile {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(12px);
+  }
+
+  .leftLabel {
+    top: 24px;
+    left: 20px;
+    max-width: 180px;
+  }
+
+  .rightLabel {
+    top: 24px;
+    right: 20px;
+    max-width: 180px;
+  }
+
+  .labelTitle,
+  .labelSubtitle {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .handleKnob {
+    width: 44px;
+    height: 44px;
+  }
+
+  .chevronIcon {
+    width: 12px;
+    height: 12px;
+  }
+}

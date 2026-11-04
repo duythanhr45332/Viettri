@@ -1,0 +1,738 @@
+{
+  "common": {
+    "meta": {
+      "title": "Viet Tri Legacy Lakeside",
+      "description": "Viet Tri Legacy Lakeside - Where time deepens into legacy."
+    },
+    "header": {
+      "explore": "Explore",
+      "cta": "Get Advice",
+      "menu": {
+        "home": "Home",
+        "homeSub": "Viet Tri Legacy Lakeside",
+        "about": "About Us",
+        "aboutSub": "Heritage story & vision",
+        "villas": "The Villas",
+        "villasSub": "Masterpiece where heritage harmonizes",
+        "livingSpace": "Living Space",
+        "livingSpaceSub": "Exclusive villa compound collection",
+        "tagline": "Exclusive resort living. Generational legacy.",
+        "consultationCta": "Register for Consultation",
+        "contact": "Contact Information",
+        "hotline": "Hotline: 0916 389 007",
+        "close": "Close",
+        "navAria": "Main navigation menu",
+        "address": "Anh Dung Street, Thanh Mieu Ward, Phu Tho"
+      }
+    },
+    "footer": {
+      "overlaySubtitle": "Are you ready to own a legacy?",
+      "overlayTitle1": "Learn more",
+      "overlayTitle2": "about the project",
+      "overlayButton": "Get Private Advice",
+      "menuTitle1": "About the Project",
+      "menuList1": [
+        "Legacy Story",
+        "Location & Connection",
+        "Developer"
+      ],
+      "menuTitle2": "Living Space",
+      "menuList2": [
+        "Complex Overview",
+        "Amenities System",
+        "Lakeside Landscape"
+      ],
+      "menuTitle3": "Product Lines",
+      "menuList3": [
+        "Master Plan",
+        "Villa Indochine",
+        "Villa Tropical"
+      ],
+      "addressTitle": "Address",
+      "addressText1": "Anh Dung Street, Thanh Mieu Ward,",
+      "addressText2": "Phu Tho.",
+      "hotlineTitle": "Hotline",
+      "disclaimer1": "All information, images, and documents regarding the Viet Tri Legacy Lakeside project are copyrighted by Tasco Joint Stock Company (Business Registration Certificate No. 0600264117).",
+      "disclaimer2": "Although prepared with the utmost care, the content in this publication is for reference only. All images, technical diagrams, spatial orientations, or descriptive specifications are for artistic illustration purposes, do not constitute legal commitments, and do not represent the official handover reality.",
+      "copyright": "© 2026 Viet Tri Legacy Lakeside. All rights reserved. Designed for wireframe preview.",
+      "hotline": "Hotline:",
+      "disclaimerTitle": "Disclaimer",
+      "backToTop": "Back to top",
+      "hotlinePhone": "0916 389 007"
+    },
+    "modal": {
+      "title": "Request Consultation",
+      "subtitle": "Please leave your information, we will contact you as soon as possible.",
+      "nameLabel": "Full Name *",
+      "namePlaceholder": "Enter your full name",
+      "phoneLabel": "Phone Number *",
+      "phonePlaceholder": "Enter your phone number",
+      "emailLabel": "Email *",
+      "emailPlaceholder": "Enter your email",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Enter consultation content...",
+      "submit": "Submit Information",
+      "closeAria": "Close",
+      "thanksTitle": "Thank you!",
+      "thanksText": "Your information has been sent successfully. We will get back to you shortly.",
+      "thanksButton": "Close"
+    }
+  },
+  "home": {
+    "meta": {
+      "title": "Viet Tri Legacy Lakeside",
+      "description": "Viet Tri Legacy Lakeside - Where time deepens into legacy."
+    },
+    "hero": {
+      "title": "LEGACY LAKESIDE",
+      "desc": "The privilege of resort-style living. A legacy to pass down through generations.",
+      "scroll": "SCROLL   -   SCROLL   -   SCROLL   -   SCROLL   -  "
+    },
+    "gallery": {
+      "quotes": [
+        "\"Live slowly, live deeply, live fully\"",
+        "\"Immerse in majestic nature\"",
+        "\"Where peace returns\""
+      ]
+    },
+    "intro": {
+      "subtitle": "About the Project",
+      "title1": "Where time",
+      "title2": "settles into",
+      "title3": "a legacy",
+      "desc1": "Amidst the ancestral land, where proud rivers converge, a masterpiece is quietly forming. Unobtrusive. Unpretentious. Viet Tri Legacy Lakeside is a private haven for the elite, a tranquil retreat after journeys of conquering the pinnacle.",
+      "desc2": "A legacy is not just a place to return to - but a place where every passing moment is honored, nourishing the soul for generations.",
+      "cta": "Discover More"
+    },
+    "villa": {
+      "title": "Compound Villa",
+      "subtitle": "For 92 elite families of the ancestral land",
+      "stats": {
+        "area": "Total Master Plan Area",
+        "units": "Total Villa Compound Area",
+        "density": "Detached Mansions",
+        "avgArea": "Building Density"
+      },
+      "cta": "Experience Living Space",
+      "statsValues": {
+        "areaValue": "17.3",
+        "areaUnit": "ha",
+        "unitsValue": "7.5",
+        "unitsUnit": "ha",
+        "densityValue": "92",
+        "densityUnit": "units",
+        "avgAreaValue": "29.12",
+        "avgAreaUnit": "%",
+        "avgAreaValueMobile": "57.5"
+      }
+    },
+    "features": {
+      "title1": "Four pillars of",
+      "title2": "distinct living standards",
+      "slides": [
+        {
+          "title": "Imprint of Position",
+          "desc": "Located in the heart of the city, embracing the vibrant pace of life while maintaining absolute privacy for a community of 92 elite owners."
+        },
+        {
+          "title": "International Imprint",
+          "desc": "A private sanctuary crafted by world-class architectural masters: WATG, NOOR, and LJ Group for a harmonious elite community."
+        },
+        {
+          "title": "Lifestyle Imprint",
+          "desc": "Resort-style living right at your doorstep with a luxurious clubhouse, private pool, green park, and many personalized amenities."
+        },
+        {
+          "title": "Heritage Imprint",
+          "desc": "Situated on sacred land adjacent to Tien Temple, each mansion is a masterpiece marking today's achievements, continuing the family legacy for generations to come."
+        }
+      ],
+      "bottomSubtitle": "A living complex",
+      "bottomTitle1": "THE PRIVILEGE",
+      "bottomTitle2": "OF",
+      "bottomTitle3": "TRANQUILITY",
+      "bottomDesc": "Viet Tri Legacy Lakeside is a private haven for the elite, a tranquil retreat after journeys of conquering the pinnacle.",
+      "cta": "Living Space"
+    },
+    "map": {
+      "subtitle": "Coordinates of",
+      "title1": "HARMONY",
+      "title2": "AT THE HUB OF",
+      "title3": "CONNECTIVITY",
+      "locations": [
+        {
+          "name": "Hung Vuong Square",
+          "distance": "700 M"
+        },
+        {
+          "name": "Tien Temple",
+          "distance": "500 M"
+        },
+        {
+          "name": "Hung Temple",
+          "distance": "13 KM"
+        },
+        {
+          "name": "Noi Bai - Lao Cai Expressway (CT05)",
+          "distance": "8 KM"
+        },
+        {
+          "name": "Noi Bai Airport",
+          "distance": "60 KM"
+        }
+      ]
+    },
+    "products": {
+      "subtitle": "Product Lines",
+      "title1": "The intersection",
+      "title2": "of two masterpieces",
+      "slides": [
+        {
+          "title1": "Two masterpieces in harmony",
+          "title2": "MODERN INDOCHINE",
+          "desc": "Timeless glamorous imprint\nThe charm of the East intertwined with the sophistication of Western architecture. An open space preserving the golden stories of the family.",
+          "statsValues": {
+            "quantity": "42 mansions",
+            "scale": "3 floors and 1 attic",
+            "landArea": "240 m² – 469.5 m²",
+            "density": "27.7% – 57.5%",
+            "ownership": "Long-term ownership"
+          }
+        },
+        {
+          "title1": "Two masterpieces in harmony",
+          "title2": "CONTEMPORARY TROPICAL",
+          "desc": "Tropical breath by the lake\nMaximizing natural light and cool breeze. A design that brings nature into every beat of life, creating a relaxing feeling like an endless vacation.",
+          "statsValues": {
+            "quantity": "50 mansions",
+            "scale": "3 floors and 1 attic",
+            "landArea": "240 m² – 469.5 m²",
+            "density": "27.7% – 57.5%",
+            "ownership": "Long-term ownership"
+          }
+        }
+      ],
+      "stats": {
+        "quantity": "Quantity",
+        "scale": "Scale",
+        "landArea": "Land Area",
+        "density": "Building Density",
+        "ownership": "Ownership"
+      },
+      "cta": "View Layout"
+    },
+    "partners": {
+      "title": "Where international masters\ncreate an enduring imprint",
+      "subtitle": "Two architectural masterpieces standing side by side like harmonies awaiting resonance from refined souls.",
+      "list": [
+        {
+          "desc1": "Legend of global",
+          "desc2": "resort architecture"
+        },
+        {
+          "desc1": "Master of ecological",
+          "desc2": "landscape creation"
+        },
+        {
+          "desc1": "Elite interior",
+          "desc2": "imprint"
+        }
+      ],
+      "middleTitle1": "Understanding to",
+      "middleTitle2": "create a legacy",
+      "middleDesc": "Owning and operating unique, world-class resort havens such as Six Senses Ninh Van Bay or Ana Mandara Da Lat, Tasco deeply understands the art of honoring privacy and absolute personalized luxury. Viet Tri Legacy Lakeside is the perfect continuation of that philosophy, bringing a completely new standard of living — where luxury does not need to be ostentatious but is deeply felt through every tranquil moment.",
+      "investorTitle": "Developer",
+      "investorSubtitle": "Understanding to create sustainable values",
+      "projects": [
+        {
+          "title": "Six Senses Ninh Van Bay",
+          "location": "A resort paradise hidden in the pearl bay"
+        },
+        {
+          "title": "Ana Mandara Villas Da Lat Resort & Spa",
+          "location": "Touch the luxurious heritage by the pine forest in the heart of Da Lat"
+        }
+      ]
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "About Project | Viet Tri Legacy Lakeside",
+      "description": "Where time deepens into legacy - Introduction to Viet Tri Legacy Lakeside project."
+    },
+    "hero": {
+      "breadcrumbHome": "Home",
+      "breadcrumbCurrent": "About the Project",
+      "title1": "Where time",
+      "title2": "settles into legacy",
+      "scrollDown": "Scroll down",
+      "breadcrumbAria": "Breadcrumb",
+      "sectionAria": "Project Introduction"
+    },
+    "slider": {
+      "slides": [
+        {
+          "num": "01",
+          "tag": "Origin",
+          "title1": "The beginning of",
+          "title2": "the ancestral land",
+          "desc": "In the heart of the sacred ancestral land, where proud rivers converge, a masterpiece is quietly taking shape."
+        },
+        {
+          "num": "02",
+          "tag": "Threshold",
+          "title1": "The threshold",
+          "title2": "of a private world",
+          "desc": "No noise. No ostentation. Viet Tri Legacy Lakeside is a private haven for distinguished individuals — a tranquil retreat to savor the true value of living after journeys of conquering new heights."
+        },
+        {
+          "num": "03",
+          "tag": "Stillness",
+          "title1": "Where legacy settles",
+          "title2": "for generations",
+          "desc": "Beside the gentle lake, a thousand-year royal aura crystallizes in stillness and refined, enduring values. Here, time does not pass — it lingers and becomes a legacy for generations."
+        }
+      ],
+      "prevAria": "Back",
+      "nextAria": "Next"
+    },
+    "map": {
+      "title1": "Convergence point",
+      "title2": "Exclusive location",
+      "narrative": "Located at the heart of the city, Viet Tri Legacy Lakeside enjoys a priceless dual pace of life. Seamlessly connecting to key medical, commercial, and cultural destinations in moments, yet returning to a private, serene haven.",
+      "locations": [
+        {
+          "name": "Hung Vuong Square",
+          "distance": "700 M"
+        },
+        {
+          "name": "Tien Temple",
+          "distance": "500 M"
+        },
+        {
+          "name": "Hung Temple",
+          "distance": "13 KM"
+        },
+        {
+          "name": "Noi Bai - Lao Cai Expressway (CT05)",
+          "distance": "8 KM"
+        },
+        {
+          "name": "Noi Bai Airport",
+          "distance": "60 KM"
+        }
+      ]
+    },
+    "values": {
+      "titleLine1": "Values that define",
+      "titleLine2": "a distinctive",
+      "titleLine3": "living standard",
+      "intro": "In the heart of the sacred ancestral land, where proud rivers converge, a masterpiece is quietly taking shape.",
+      "prev": "Previous slide",
+      "next": "Next slide",
+      "viewItem": "View",
+      "items": [
+        {
+          "title": "A secluded address at the center of connection",
+          "desc": "Absolute seclusion and privacy right in the administrative and commercial core of Viet Tri — the vibrant city life lies just outside, yet once the gate closes, complete serenity awaits."
+        },
+        {
+          "title": "Where waters gather, prosperity endures",
+          "desc": "A riverside, lakeside location brings a serene and expansive living space, embracing the flow of royal energy and lasting prosperity for its owners."
+        },
+        {
+          "title": "A collection of 92 one-of-a-kind legacies",
+          "desc": "A limited number creates exclusive value. Each mansion is a precious asset, guaranteeing sustainable value appreciation potential."
+        },
+        {
+          "title": "A resort experience at your doorstep",
+          "desc": "Exclusive amenities including a Clubhouse, swimming pool, sports courts and a water park turn every ordinary day into a relaxing getaway for all the senses."
+        },
+        {
+          "title": "Architectural signatures from international firms",
+          "desc": "The convergence of global design brands (WATG, LJ Group, NOOR) delivers perfect harmony between planning, architecture, landscape and interiors."
+        },
+        {
+          "title": "Credibility guaranteed by developer Tasco",
+          "desc": "Tasco's extensive experience in creating unique resorts is a commitment to construction quality, a service ecosystem and long-term added value."
+        },
+        {
+          "title": "Exemplary operation and security services",
+          "desc": "The partnership with Ana Services ensures a closed security system, meticulously maintained landscapes and a premium quality of life for years to come."
+        },
+        {
+          "title": "A community of elite residents",
+          "desc": "A gathering place for distinguished individuals sharing the same status, aesthetic taste and living standards, creating a civilized living environment and a foundation for lasting connections."
+        }
+      ]
+    }
+  },
+  "livingSpace": {
+    "meta": {
+      "title": "Living Space | Viet Tri Legacy Lakeside",
+      "description": "Exclusive resort living at your doorstep - Unique amenities, landscapes, and security ecosystem at Viet Tri Legacy Lakeside."
+    },
+    "hero": {
+      "breadcrumbHome": "Home",
+      "breadcrumbCurrent": "Living Space",
+      "title": "Privilege of living\na retreat at your\ndoorstep",
+      "intro": "Transcending the conventional concept of a dwelling, Viet Tri Legacy Lakeside curates an exclusive, private ecosystem. Here, every step touches serenity, and every amenity is personalized to nurture human emotion and well-being."
+    },
+    "noor": {
+      "title": "Space connecting\nin tranquil seclusion",
+      "desc": "Crafted by Noor, the Clubhouse at Viet Tri Legacy Lakeside is a serene sanctuary — a place to disconnect from daily bustle and reconnect with oneself and kindred spirits.",
+      "partnerTag": "Exquisite Interior Signature",
+      "items": [
+        {
+          "index": "01/",
+          "title": "Cafe Lounge",
+          "desc": "Indulge in gentle, delicate flavors within an artistic ambiance."
+        },
+        {
+          "index": "02/",
+          "title": "Library & Art Space",
+          "desc": "A tranquil reading nook accentuated by fine artworks and lush gardens."
+        },
+        {
+          "index": "03/",
+          "title": "Wellness & Fitness",
+          "desc": "Nurture wellness with a modern Gym, mindful Yoga, relaxing Sauna and prestigious 3D Golf area."
+        }
+      ]
+    },
+    "lj": {
+      "title": "Flow of pure\nnatural\nessence",
+      "desc": "Over 6,400m2 dedicated to greenery and water surface, creating a pristine microclimate. LJ-Group has masterfully woven nature into everyday living, winding from the central park into private garden corners.",
+      "partnerTag": "Master of Landscape Architecture",
+      "items": [
+        {
+          "title": "Lake Park & Waterside",
+          "desc": "A peaceful promenade, waterfall resting pavilions and lakeside amphitheater."
+        },
+        {
+          "title": "Outdoor Recreation & Sports",
+          "desc": "Trendy Pickleball courts, multi-sport facilities and family bonding spaces."
+        }
+      ]
+    },
+    "family": {
+      "title": "Preserving priceless\ncherished moments",
+      "desc": "More than just a living space, Viet Tri Legacy Lakeside is where family values are cherished and elite community bonds are nurtured. Surrounded by nature and absolute security, every generation finds their own tranquil sanctuary.",
+      "items": [
+        {
+          "index": "01/",
+          "title": "Childhood Haven",
+          "desc": "A safe, enclosed children's playground empowering youthful memories amidst nature."
+        },
+        {
+          "index": "02/",
+          "title": "Elite Gathering",
+          "desc": "Outdoor socializing spaces and shaded stands where like-minded neighbors share refined pleasures."
+        },
+        {
+          "index": "03/",
+          "title": "Tranquil Corner",
+          "desc": "A private meditative retreat where homeowners find balance and harmony with ancestral vitality."
+        }
+      ]
+    },
+    "ana": {
+      "title": "Absolute Privacy",
+      "desc": "Privacy is the ultimate privilege. With a closed Villa compound model, multi-layered 24/7 security and professional operations from Ana Services, owners can rest assured to enjoy leisurely living, sheltered from the world outside.",
+      "items": [
+        {
+          "text": "Meticulous landscape maintaining luxury living standards"
+        },
+        {
+          "text": "Securing a closed and gated security system"
+        }
+      ]
+    }
+  },
+  "theVillas": {
+    "meta": {
+      "title": "The Villas | Viet Tri Legacy Lakeside",
+      "description": "A limited collection of 92 detached villas at Viet Tri Legacy Lakeside is the culmination of architectural artistry."
+    },
+    "hero": {
+      "breadcrumbHome": "Home",
+      "breadcrumbCurrent": "The Villas",
+      "title1": "Masterpiece",
+      "title2": "harmony resides",
+      "titleMain": "Masterpiece",
+      "titleSub": "where",
+      "titleHighlight": "harmony resides",
+      "desc": "A limited collection of 92 detached villas at Viet Tri Legacy Lakeside is the culmination of architectural artistry. Where time lingers in every graceful stroke of Indochine and nature weaves into every open breath of the tropics.",
+      "sectionAria": "Introduction to The Villas product line",
+      "breadcrumbAria": "Breadcrumb"
+    },
+    "comparison": {
+      "titleIndochine": "Modern Indochine",
+      "subIndochine": "Timeless Aristocratic Heritage",
+      "titleTropical": "Contemporary Tropical",
+      "subTropical": "Lakeside Tropical Breath",
+      "comparisonAria": "Compare Modern Indochine and Contemporary Tropical designs"
+    },
+    "tropical": {
+      "title": "Contemporary Tropical - \nLakeside Tropical Breath",
+      "desc": "Honoring freedom and openness, Contemporary Tropical style maximizes natural sunlight and air circulation. The open design, wooden louvers and large glass walls dissolve the boundary between indoors and outdoors, bringing nature into every rhythm of life.",
+      "imageAlt": "Contemporary Tropical 3D Visual",
+      "stats": {
+        "quantityLabel": "Quantity",
+        "quantity": "61 villas",
+        "scaleLabel": "Scale",
+        "scale": "3 floors - 1 attic",
+        "areaLabel": "Area",
+        "area": "240 – 469.5 m²"
+      },
+      "floorPlan": {
+        "layoutEmpty": "Empty",
+        "layoutFurnished": "Furnished",
+        "floorLabel": "View Floor",
+        "modeLabel": "Layout",
+        "prefixEmpty": "Bare Floor Plan",
+        "prefixFurnished": "Interior Floor Plan",
+        "pinLabel": "Position",
+        "diagramAlt": "Contemporary Tropical Floor Plan",
+        "floors": {
+          "1": {
+            "name": "Level 1",
+            "area": "159.1 m²",
+            "rooms": [
+              {
+                "id": "01",
+                "name": "Entrance Foyer",
+                "pin": 1
+              },
+              {
+                "id": "02",
+                "name": "Living Room",
+                "pin": 2
+              },
+              {
+                "id": "03",
+                "name": "Elevator Lobby",
+                "pin": 3
+              },
+              {
+                "id": "04",
+                "name": "Kitchen & Dining Room",
+                "pin": 4
+              },
+              {
+                "id": "05",
+                "name": "Maid's Room",
+                "pin": 5
+              },
+              {
+                "id": "06",
+                "name": "Bathroom",
+                "pin": 6
+              },
+              {
+                "id": "07",
+                "name": "Storage",
+                "pin": 7
+              }
+            ]
+          },
+          "2": {
+            "name": "Level 2",
+            "area": "158 m²",
+            "rooms": [
+              {
+                "id": "01",
+                "name": "Elevator Lobby",
+                "pin": 1
+              },
+              {
+                "id": "02",
+                "name": "Bedroom",
+                "pin": 2
+              },
+              {
+                "id": "03",
+                "name": "Walk-in Closet",
+                "pin": 3
+              },
+              {
+                "id": "04",
+                "name": "Bathroom",
+                "pin": 4
+              },
+              {
+                "id": "05",
+                "name": "Balcony",
+                "pin": 5
+              }
+            ]
+          },
+          "3": {
+            "name": "Level 3",
+            "area": "134.9 m²",
+            "rooms": [
+              {
+                "id": "01",
+                "name": "Elevator Lobby",
+                "pin": 1
+              },
+              {
+                "id": "02",
+                "name": "Bedroom",
+                "pin": 2
+              },
+              {
+                "id": "03",
+                "name": "Laundry Room",
+                "pin": 3
+              },
+              {
+                "id": "04",
+                "name": "Altar Room",
+                "pin": 4
+              },
+              {
+                "id": "05",
+                "name": "Bathroom",
+                "pin": 5
+              },
+              {
+                "id": "06",
+                "name": "Balcony",
+                "pin": 6
+              }
+            ]
+          }
+        }
+      }
+    },
+    "indochine": {
+      "title": "Modern Indochine - \nTimeless Aristocratic Heritage",
+      "desc": "Celebrating sophistication and prestige, Modern Indochine seamlessly combines French classical grandeur with traditional East Asian soul. Elegant graceful arches, warm natural timber, and intricate artisanal carvings form a bespoke living sanctuary that endures through generations.",
+      "imageAlt": "Modern Indochine 3D Visual",
+      "stats": {
+        "quantityLabel": "Quantity",
+        "quantity": "31 villas",
+        "scaleLabel": "Scale",
+        "scale": "3 floors - 1 attic",
+        "areaLabel": "Area",
+        "area": "240 – 469.5 m²"
+      },
+      "floorPlan": {
+        "layoutEmpty": "Empty",
+        "layoutFurnished": "Furnished",
+        "floorLabel": "View Floor",
+        "modeLabel": "Layout",
+        "prefixEmpty": "Bare Floor Plan",
+        "prefixFurnished": "Interior Floor Plan",
+        "pinLabel": "Position",
+        "diagramAlt": "Modern Indochine Floor Plan",
+        "floors": {
+          "1": {
+            "name": "Level 1",
+            "area": "149.6 m²",
+            "rooms": [
+              {
+                "id": "01",
+                "name": "Entrance Foyer",
+                "pin": 1
+              },
+              {
+                "id": "02",
+                "name": "Living Room",
+                "pin": 2
+              },
+              {
+                "id": "03",
+                "name": "Elevator Lobby",
+                "pin": 3
+              },
+              {
+                "id": "04",
+                "name": "Kitchen & Dining Room",
+                "pin": 4
+              },
+              {
+                "id": "05",
+                "name": "Maid's Room",
+                "pin": 5
+              },
+              {
+                "id": "06",
+                "name": "Bathroom",
+                "pin": 6
+              }
+            ]
+          },
+          "2": {
+            "name": "Level 2",
+            "area": "156 m²",
+            "rooms": [
+              {
+                "id": "01",
+                "name": "Elevator Lobby",
+                "pin": 1
+              },
+              {
+                "id": "02",
+                "name": "Bedroom",
+                "pin": 2
+              },
+              {
+                "id": "03",
+                "name": "Walk-in Closet",
+                "pin": 3
+              },
+              {
+                "id": "04",
+                "name": "Bathroom",
+                "pin": 4
+              },
+              {
+                "id": "05",
+                "name": "Balcony",
+                "pin": 5
+              }
+            ]
+          },
+          "3": {
+            "name": "Level 3",
+            "area": "125.5 m²",
+            "rooms": [
+              {
+                "id": "01",
+                "name": "Elevator Lobby",
+                "pin": 1
+              },
+              {
+                "id": "02",
+                "name": "Bedroom",
+                "pin": 2
+              },
+              {
+                "id": "03",
+                "name": "Laundry Room",
+                "pin": 3
+              },
+              {
+                "id": "04",
+                "name": "Altar Room",
+                "pin": 4
+              },
+              {
+                "id": "05",
+                "name": "Bathroom",
+                "pin": 5
+              },
+              {
+                "id": "06",
+                "name": "Balcony",
+                "pin": 6
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

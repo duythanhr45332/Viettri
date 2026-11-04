@@ -1,0 +1,314 @@
+/* Figma node 45:2883 — 1440 wide, bg #411514, pt 80 / px 60 / pb 120 */
+.section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: #411514;
+  color: var(--text-on-green-title, #e1d8c4);
+}
+
+/* ---------- Background (45:2884 – 45:2886) ---------- */
+/* 1095 x 960 at left 430 → percentages of the 1440 frame */
+.bgPhoto,
+.bgPhotoShade {
+  position: absolute;
+  bottom: 0;
+  left: 29.86%;
+  width: 76.04%;
+  height: 960px;
+  max-height: 100%;
+  pointer-events: none;
+}
+
+.bgPhoto {
+  overflow: hidden;
+  /* rotate(180) + scaleY(-1) in Figma = horizontal mirror */
+  transform: scaleX(-1);
+}
+
+/* Image is 152.12% tall, offset -31.44% from the top */
+.bgPhotoInner {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: -31.44%;
+  height: 152.12%;
+}
+
+.bgPhotoImg {
+  object-fit: cover;
+}
+
+.bgPhotoShade {
+  background-image:
+    linear-gradient(270deg, rgba(65, 21, 20, 0) 0%, #411514 100%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0) 61.026%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+/* 45:2886 — full-width fade, 965 tall */
+.bgFade {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 965px;
+  max-height: 100%;
+  background: linear-gradient(180deg, #411514 12.786%, rgba(65, 21, 20, 0.4) 100%);
+  pointer-events: none;
+}
+
+/* ---------- Content ---------- */
+.container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 80px 40px 120px;
+  box-sizing: border-box;
+}
+
+/* 45:2887 */
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: 172px;
+  width: 100%;
+}
+
+.title {
+  width: 451px;
+  flex-shrink: 0;
+  margin: 0;
+  font-family: var(--font-zalando), sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 42px;
+  letter-spacing: -0.32px;
+  color: var(--text-on-green-title, #e1d8c4);
+  white-space: pre-line;
+}
+
+/* 45:2889 */
+.headerRight {
+  display: flex;
+  flex: 1 0 0;
+  align-items: flex-start;
+  gap: 230px;
+  min-width: 0;
+}
+
+/* 45:2890 */
+.narrative {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  min-width: 0;
+}
+
+.desc {
+  margin: 0;
+  font-family: var(--font-playfair), serif;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--text-on-green-body, rgba(225, 216, 196, 0.7));
+}
+
+/* 45:2895 — logo as alpha mask tinted with title colour */
+.anaLogo {
+  display: block;
+  width: 119.317px;
+  height: 56px;
+  background-color: var(--text-on-green-title, #e1d8c4);
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+}
+
+/* 45:2896 — 54 x 32, mirrored */
+.flourish {
+  display: block;
+  width: 54px;
+  height: 32px;
+  flex-shrink: 0;
+  transform: scaleX(-1);
+}
+
+/* 45:2897 */
+.cards {
+  display: flex;
+  align-items: flex-end;
+  gap: 60px;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 12px;
+  margin: 0;
+}
+
+.cardImage {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cardLarge {
+  width: 553px;
+}
+
+.cardLarge .cardImage {
+  height: 472px;
+}
+
+.cardSmall {
+  width: 348px;
+}
+
+.cardSmall .cardImage {
+  height: 393px;
+}
+
+.cardImg {
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover .cardImg {
+  transform: scale(1.04);
+}
+
+/* 45:2900 — gap 8 */
+.caption {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-playfair), serif;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--text-on-green-body, rgba(225, 216, 196, 0.7));
+  white-space: nowrap;
+}
+
+.captionIcon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1280px) {
+  .header {
+    gap: 80px;
+  }
+
+  .headerRight {
+    gap: 60px;
+  }
+
+  .title {
+    width: 360px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 64px 40px 96px;
+    gap: 60px;
+  }
+
+  .header {
+    gap: 48px;
+  }
+
+  .title {
+    width: 280px;
+  }
+
+  .cardLarge {
+    width: 58%;
+  }
+
+  .cardSmall {
+    width: 36%;
+  }
+
+  .cardLarge .cardImage {
+    height: 380px;
+  }
+
+  .cardSmall .cardImage {
+    height: 320px;
+  }
+
+  .caption {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 768px) {
+  .bgPhoto,
+  .bgPhotoShade {
+    left: 0;
+    width: 100%;
+  }
+
+  .container {
+    padding: 56px 20px 72px;
+    gap: 40px;
+  }
+
+  .header,
+  .headerRight {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .title {
+    width: 100%;
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .headerRight {
+    width: 100%;
+  }
+
+  .flourish {
+    display: none;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 40px;
+  }
+
+  .cardLarge,
+  .cardSmall {
+    width: 100%;
+  }
+
+  .cardLarge .cardImage,
+  .cardSmall .cardImage {
+    height: 300px;
+  }
+
+  .desc,
+  .caption {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .caption {
+    align-items: flex-start;
+  }
+}

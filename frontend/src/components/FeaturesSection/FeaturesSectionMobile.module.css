@@ -1,0 +1,228 @@
+.mobileContainer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 24px 60px 24px;
+  gap: 60px;
+  color: var(--text-on-green-title);
+  pointer-events: auto;
+  /* Re-enable pointer events since wrapper is none */
+}
+
+/* Title Section */
+.titleSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 32px;
+  margin-bottom: -28px; /* Reduces the 60px container gap to 32px */
+}
+
+.title {
+  font-family: var(--font-zalando), sans-serif;
+  font-weight: 500;
+  font-size: var(--font-h2-size);
+  line-height: var(--font-h2-line-height);
+  letter-spacing: -0.32px;
+  text-align: center;
+  margin: 0;
+  color: var(--text-on-green-title);
+}
+
+.titleOrnaments {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.lineLeft,
+.lineRight {
+  flex: 1;
+  height: 1px;
+  background-color: var(--text-on-green-title);
+}
+
+.ornamentCenter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ornamentIcon {
+  position: relative;
+  width: 41px;
+  height: 24px;
+}
+
+.ornamentIconRight {
+  position: relative;
+  width: 41px;
+  height: 24px;
+}
+
+.img {
+  object-fit: contain;
+}
+
+/* Slider Area */
+.sliderArea {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.mainImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 193px;
+  overflow: hidden;
+}
+
+.mainImage {
+  object-fit: cover;
+}
+
+.slideInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.slideTitle {
+  font-family: var(--font-zalando), sans-serif;
+  font-weight: 600;
+  font-size: var(--font-h5-size);
+  line-height: var(--font-h5-line-height);
+  margin: 0;
+  color: var(--text-on-green-title);
+}
+
+.slideDesc {
+  font-family: var(--font-playfair), serif;
+  font-weight: 400;
+  font-size: var(--font-body-large-size);
+  line-height: var(--font-body-large-line-height);
+  margin: 0;
+  color: rgba(225, 216, 196, 0.7);
+}
+
+.sliderControlsRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.sliderControls {
+  display: flex;
+  gap: 8px;
+}
+
+.controlButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(225, 216, 196, 0.15);
+  background: transparent;
+  color: var(--text-on-green-title);
+  cursor: pointer;
+}
+
+.pagination {
+  font-family: var(--font-zalando), sans-serif;
+  font-style: italic;
+  display: flex;
+  align-items: baseline;
+  text-align: center;
+  color: var(--text-on-green-title);
+}
+
+.currentNumber {
+  font-size: var(--font-h1-size);
+  line-height: var(--font-h1-line-height);
+  letter-spacing: -0.24px;
+}
+
+.totalNumber {
+  font-size: var(--font-h3-size);
+  line-height: var(--font-h3-line-height);
+  color: rgba(225, 216, 196, 0.25);
+}
+
+/* Divider */
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--text-on-green-title);
+}
+
+/* Bottom Text Area */
+.bottomContent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.bottomHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bottomSubtitle {
+  font-family: var(--font-playfair), serif;
+  font-weight: 400;
+  font-size: var(--font-body-large-size);
+  line-height: var(--font-body-large-line-height);
+  margin: 0;
+  color: rgba(225, 216, 196, 0.7);
+}
+
+.bottomTitle {
+  font-family: var(--font-zalando), sans-serif;
+  font-weight: 500;
+  font-size: var(--font-h2-size);
+  line-height: var(--font-h2-line-height);
+  letter-spacing: -0.32px;
+  margin: 0;
+  color: var(--text-on-green-title);
+}
+
+.bottomDesc {
+  font-family: var(--font-playfair), serif;
+  font-weight: 400;
+  font-size: var(--font-body-large-size);
+  line-height: var(--font-body-large-line-height);
+  margin: 0;
+  color: rgba(225, 216, 196, 0.7);
+}
+
+/* Corner Ornaments */
+.cornerOrnaments {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 12px;
+}
+
+.cornerIcon {
+  position: relative;
+  width: 46px;
+  height: 24px;
+}
+
+.cornerIconRight {
+  position: relative;
+  width: 46px;
+  height: 24px;
+}

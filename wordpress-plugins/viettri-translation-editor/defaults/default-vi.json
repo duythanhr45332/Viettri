@@ -1,0 +1,700 @@
+{
+  "common": {
+    "meta": {
+      "title": "Viet Tri Legacy Lakeside",
+      "description": "Viet Tri Legacy Lakeside - Nơi dòng thời gian được lắng đọng thành di sản."
+    },
+    "header": {
+      "cta": "Tư vấn",
+      "menu": {
+        "home": "Trang chủ",
+        "homeSub": "Việt Trì Legacy Lakeside",
+        "about": "Giới thiệu",
+        "aboutSub": "Câu chuyện di sản & tầm nhìn kiến tạo",
+        "villas": "Dòng sản phẩm",
+        "villasSub": "Tuyệt tác nơi giao hòa",
+        "livingSpace": "Không gian sống",
+        "livingSpaceSub": "Bộ sưu tập dinh thự biệt lập đỉnh cao",
+        "tagline": "Đặc quyền sống nghỉ dưỡng. Di sản truyền thế hệ.",
+        "consultationCta": "Đăng ký tư vấn",
+        "contact": "Thông tin liên hệ",
+        "hotline": "Hotline: 0916 389 007",
+        "close": "Đóng",
+        "navAria": "Menu điều hướng chính",
+        "address": "Phố Anh Dũng, Phường Thanh Miếu, Phú Thọ"
+      }
+    },
+    "footer": {
+      "overlaySubtitle": "Chạm vào di sản",
+      "overlayTitle1": "Liên hệ để được ",
+      "overlayTitle2": "tư vấn riêng",
+      "overlayButton": "Đăng ký",
+      "addressTitle": "Địa chỉ",
+      "addressText1": "Phố Anh Dũng, Phường Thanh Miếu,",
+      "addressText2": "Phú Thọ.",
+      "hotlineTitle": "Hotline",
+      "disclaimer1": "Toàn bộ thông tin, hình ảnh và tài liệu về dự án Việt Trì Legacy Lakeside thuộc quyền sở hữu bản quyền của Công ty Cổ phần Tasco (GCNĐKDN số 0600264117).",
+      "disclaimer2": "Dù được chuẩn bị với sự cẩn trọng cao nhất, nội dung trong ấn phẩm này chỉ mang tính chất tham khảo. Các hình ảnh, sơ đồ kỹ thuật, định hướng không gian hay thông số mô tả đều nhằm mục đích minh họa nghệ thuật, không cấu thành cam kết pháp lý hay đại diện cho thực tế bàn giao chính thức.",
+      "copyright": "© 2026 Viet Tri Legacy Lakeside. All rights reserved. Designed for wireframe preview.",
+      "disclaimerTitle": "Lưu ý",
+      "backToTop": "Trở về đầu trang",
+      "hotlinePhone": "0916 389 007"
+    },
+    "modal": {
+      "title": "Đăng ký tư vấn",
+      "subtitle": "Vui lòng để lại thông tin, chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất.",
+      "nameLabel": "Họ và tên *",
+      "namePlaceholder": "Nhập họ và tên của bạn",
+      "phoneLabel": "Số điện thoại *",
+      "phonePlaceholder": "Nhập số điện thoại",
+      "emailLabel": "Email *",
+      "emailPlaceholder": "Nhập email",
+      "messageLabel": "Lời nhắn",
+      "messagePlaceholder": "Nhập nội dung cần tư vấn...",
+      "submit": "Gửi thông tin",
+      "closeAria": "Đóng",
+      "thanksTitle": "Cảm ơn bạn!",
+      "thanksText": "Thông tin của bạn đã được gửi thành công. Chúng tôi sẽ liên hệ lại với bạn trong thời gian sớm nhất.",
+      "thanksButton": "Đóng"
+    }
+  },
+  "home": {
+    "meta": {
+      "title": "Viet Tri Legacy Lakeside",
+      "description": "Viet Tri Legacy Lakeside - Nơi dòng thời gian được lắng đọng thành di sản."
+    },
+    "hero": {
+      "desc": "Đặc quyền sống nghỉ dưỡng. Di sản truyền thế hệ.",
+      "scroll": "SCROLL   -   SCROLL   -   SCROLL   -   SCROLL   -  "
+    },
+    "gallery": {
+      "quotes": [
+        "Giữa một thế giới không ngừng chuyển động,\nđôi khi, nơi ta khát khao tìm về nhất\nlà một khoảng lặng Bình An.",
+        "\"Hòa mình cùng thiên nhiên hùng vĩ\"",
+        "\"Nơi bình yên tìm về\""
+      ]
+    },
+    "intro": {
+      "subtitle": "Giới thiệu về dự án",
+      "title1": "Nơi dòng thời gian",
+      "title2": "lắng đọng thành di sản",
+      "desc1": "Giữa vùng đất cội nguồn, nơi những dòng sông kiêu hãnh hòa quyện, có một tuyệt tác đang lặng lẽ hình thành.",
+      "desc2": "Nơi đây là bến đỗ riêng tư dành cho số ít chủ nhân thấu hiểu giá trị của sự an tĩnh.",
+      "cta": "Khám phá"
+    },
+    "villa": {
+      "title": "BỘ SƯU TẬP VILLA COMPOUND",
+      "subtitle": "Khu dinh thự biệt lập chuẩn sông nghỉ dưỡng duy nhất tại lõi trung tâm Việt Trì",
+      "stats": {
+        "area": "Tổng diện tích\nquy hoạch",
+        "units": "Tổng diện tích\nvilla compound",
+        "density": "Dinh thự biệt lập",
+        "avgArea": "Mật độ xây dựng gộp"
+      },
+      "cta": "Trải nghiệm không gian sống",
+      "statsValues": {
+        "areaValue": "17,3",
+        "areaUnit": "ha",
+        "unitsValue": "7,5",
+        "unitsUnit": "ha",
+        "densityValue": "92",
+        "densityUnit": "căn",
+        "avgAreaValue": "29,12",
+        "avgAreaUnit": "%",
+        "avgAreaValueMobile": "57,5"
+      }
+    },
+    "features": {
+      "title1": "Nơi bốn dấu ấn",
+      "title2": "kiến tạo một di sản",
+      "slides": [
+        {
+          "title": "Dấu ấn vị thế",
+          "desc": "Nằm tại lõi trung tâm thành phố, vừa ôm trọn nhịp sống sầm uất, vừa giữ riêng sự biệt lập tuyệt đối cho cộng đồng 92 chủ nhân ưu tú."
+        },
+        {
+          "title": "Dấu ấn quốc tế",
+          "desc": "Một chốn riêng được kiến tạo bởi những bậc thầy kiến trúc thế giới: WATG, NOOR và LJ Group dành cho một cộng đồng tinh anh đồng điệu."
+        },
+        {
+          "title": "Dấu ấn phong cách sống",
+          "desc": "Chất sống nghỉ dưỡng ngay thềm nhà với clubhouse sang trọng, hồ bơi riêng tư, công viên xanh cùng nhiều hệ tiện ích cá nhân."
+        },
+        {
+          "title": "Dấu ấn di sản",
+          "desc": "Tọa lạc trên vùng đất linh thiêng kề bên Đền Tiên, mỗi dinh thự là một tuyệt tác ghi dấu thành tựu hôm nay, tiếp nối gia phong cho muôn đời sau."
+        }
+      ],
+      "bottomTitle1": "Nơi tạo",
+      "bottomTitle2": "dấu ấn riêng",
+      "bottomTitle3": "",
+      "bottomDesc": "Việt Trì Legacy Lakeside mang đến một chuẩn mực sống hoàn toàn mới: Nơi sự sang trọng không cần lên tiếng, mà được cảm nhận qua từng khoảnh khắc bình yên."
+    },
+    "map": {
+      "subtitle": "Toạ độ độc tôn",
+      "title1": "Nơi tâm điểm",
+      "title2": "kết nối",
+      "title3": "",
+      "locations": [
+        {
+          "name": "Quảng trường Hùng Vương",
+          "distance": "700 M"
+        },
+        {
+          "name": "Đền Tiên",
+          "distance": "500 M"
+        },
+        {
+          "name": "Đền Hùng",
+          "distance": "13 KM"
+        },
+        {
+          "name": "Cao tốc Nội Bài - Lào Cai (CT05)",
+          "distance": "8 KM"
+        },
+        {
+          "name": "Sân bay Nội Bài",
+          "distance": "60 KM"
+        }
+      ]
+    },
+    "products": {
+      "title1": "Nơi giao hoà",
+      "title2": "của hai tuyệt tác",
+      "slides": [
+        {
+          "title1": "Modern Indochine",
+          "subtitle": "Dấu ấn hào hoa vượt thời gian",
+          "desc": "Nét duyên dáng của phương Đông quyện cùng sự tinh tế của kiến trúc phương Tây. Một không gian rộng mở, lưu giữ những câu chuyện của gia tộc.",
+          "statsValues": {
+            "quantity": "61 dinh thự",
+            "landArea": "240 – 469,5 m²"
+          }
+        },
+        {
+          "title1": "Contemporary Tropical",
+          "subtitle": "Hơi thở nhiệt đới bên mặt hồ",
+          "desc": "Tối đa hóa ánh sáng và khí trời. Một thiết kế mang thiên nhiên vào từng nhịp sống, tạo nên cảm giác thư giãn như một kỳ nghỉ bất tận.",
+          "statsValues": {
+            "quantity": "50 dinh thự",
+            "landArea": "240 – 469,5 m²"
+          }
+        }
+      ],
+      "stats": {
+        "quantity": "Số lượng",
+        "landArea": "Diện tích"
+      },
+      "cta": "Chiêm ngưỡng bộ sưu tập"
+    },
+    "partners": {
+      "title": "Nơi những bậc thầy\nquốc tế kiến tạo dấu ấn",
+      "subtitle": "Hai tác phẩm kiến trúc song hành như hai bản hòa ca đang chờ đón sự đồng điệu từ những tâm hồn tinh tế.",
+      "list": [
+        {
+          "desc1": "Huyền thoại kiến trúc",
+          "desc2": "nghỉ dưỡng thế giới"
+        },
+        {
+          "desc1": "Bậc thầy kiến tạo",
+          "desc2": "cảnh quan sinh thái"
+        },
+        {
+          "desc1": "Dấu ấn nội thất",
+          "desc2": "tinh hoa"
+        }
+      ],
+      "middleDesc": "Quy tụ những thương hiệu tư vấn, thiết kế hàng đầu thế giới, Việt Trì Legacy Lakeside là sự giao thoa trọn vẹn giữa tầm nhìn bản địa và tư duy kiến tạo quốc tế. Sự thấu hiểu sâu sắc nghệ thuật tôn vinh tính riêng tư từ các bậc thầy danh tiếng chính là bảo chứng cho một chuẩn mực sống hoàn toàn mới – nơi sự sang trọng không cần phô trương, mà được cảm nhận qua từng khoảnh khắc sống.",
+      "investorTitle": "Chủ đầu tư",
+      "investorSubtitle": "Thấu hiểu để kiến tạo những giá trị bền vững",
+      "projects": [
+        {
+          "title": "Six Senses Ninh Vân Bay",
+          "location": "Thiên đường nghỉ dưỡng ẩn mình giữa vịnh ngọc"
+        },
+        {
+          "title": "Ana Mandara Villas Đà Lạt Resort & Spa",
+          "location": "Chạm vào di sản sang trọng bên rừng thông giữa lòng Đà Lạt"
+        }
+      ]
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "Giới thiệu dự án | Viet Tri Legacy Lakeside",
+      "description": "Nơi dòng thời gian lắng đọng thành di sản - Giới thiệu dự án Việt Trì Legacy Lakeside."
+    },
+    "hero": {
+      "breadcrumbHome": "Trang chủ",
+      "breadcrumbCurrent": "Giới thiệu dự án",
+      "title1": "Nơi dòng thời gian",
+      "title2": "lắng đọng thành di sản",
+      "breadcrumbAria": "Điều hướng",
+      "sectionAria": "Giới thiệu dự án"
+    },
+    "slider": {
+      "slides": [
+        {
+          "num": "01",
+          "tag": "Khởi đầu",
+          "title1": "Khởi đầu của",
+          "title2": "vùng đất cội nguồn",
+          "desc": "Giữa vùng đất cội nguồn linh thiêng, nơi những dòng sông kiêu hãnh hòa quyện, có một tuyệt tác đang lặng lẽ hình thành."
+        },
+        {
+          "num": "02",
+          "tag": "Ngưỡng cửa",
+          "title1": "Ngưỡng cửa",
+          "title2": "thế giới riêng tư",
+          "desc": "Không ồn ào. Không phô trương. Việt Trì Legacy Lakeside là bến đỗ riêng tư dành cho những tầm vóc ưu tú, nơi dừng chân tĩnh lặng để tận hưởng giá trị sống đích thực sau những hành trình chinh phục đỉnh cao."
+        },
+        {
+          "num": "03",
+          "tag": "Điểm lắng",
+          "title1": "Điểm lắng di sản",
+          "title2": "truyền lại muôn đời",
+          "desc": "Bên mặt hồ êm sóng, vương khí ngàn năm kết tinh trong tĩnh lặng và những giá trị bền vững được chắt lọc. Nơi thời gian không trôi đi, mà đọng lại thành di sản cho muôn đời."
+        }
+      ],
+      "prevAria": "Lùi lại",
+      "nextAria": "Tiếp theo"
+    },
+    "map": {
+      "title1": "Tâm điểm giao hòa",
+      "title2": "Vị thế độc tôn",
+      "narrative": "Tọa lạc tại lõi trung tâm thành phố, Việt Trì Legacy Lakeside sở hữu một nhịp sống song hành đắt giá. Kết nối mượt mà tới các trọng điểm y tế, thương mại và văn hóa chỉ trong khoảnh khắc, nhưng khi trở về vẫn giữ trọn một thế giới riêng tư, tĩnh tại.",
+      "locations": [
+        {
+          "name": "Quảng trường Hùng Vương",
+          "distance": "700 M"
+        },
+        {
+          "name": "Đền Tiên",
+          "distance": "500 M"
+        },
+        {
+          "name": "Đền Hùng",
+          "distance": "13 KM"
+        },
+        {
+          "name": "Cao tốc Nội Bài - Lào Cai (CT05)",
+          "distance": "8 KM"
+        },
+        {
+          "name": "Sân bay Nội Bài",
+          "distance": "60 KM"
+        }
+      ]
+    },
+    "values": {
+      "titleLine1": "Giá trị định hình",
+      "titleLine2": "của chuẩn sống",
+      "titleLine3": "khác biệt",
+      "intro": "Giữa vùng đất cội nguồn linh thiêng, nơi những dòng sông kiêu hãnh hòa quyện, có một tuyệt tác đang lặng lẽ hình thành.",
+      "prev": "Slide trước",
+      "next": "Slide tiếp theo",
+      "viewItem": "Xem",
+      "items": [
+        {
+          "title": "Tọa độ biệt lập giữa tâm điểm kết nối",
+          "desc": "Biệt lập và riêng tư tuyệt đối ngay tại lõi hành chính – thương mại Việt Trì, nhịp sống phồn hoa ngay bên ngoài, nhưng khép lại cánh cổng là không gian an yên trọn vẹn."
+        },
+        {
+          "title": "Thế đất tụ thủy, vương khí trường tồn",
+          "desc": "Vị trí ven sông cận hồ mang lại không gian sống an yên, khoáng đạt, đón trọn dòng chảy vương khí và sự hanh thông bền vững cho gia chủ."
+        },
+        {
+          "title": "Bộ sưu tập 92 di sản độc bản",
+          "desc": "Số lượng hữu hạn tạo nên giá trị đặc quyền. Mỗi căn dinh thự là một tài sản tích sản đắt giá, bảo chứng cho tiềm năng gia tăng giá trị bền vững."
+        },
+        {
+          "title": "Trải nghiệm nghỉ dưỡng bên thềm nhà",
+          "desc": "Hệ tiện ích đặc quyền với Clubhouse, hồ bơi, sân thể thao và công viên mặt nước, biến mỗi ngày thường nhật thành một kỳ nghỉ thư thái cho mọi giác quan."
+        },
+        {
+          "title": "Dấu ấn kiến trúc từ các đơn vị quốc tế",
+          "desc": "Sự hội tụ của các thương hiệu thiết kế toàn cầu (WATG, LJ Group, NOOR) mang đến sự đồng bộ hoàn hảo giữa quy hoạch, kiến trúc, cảnh quan và nội thất."
+        },
+        {
+          "title": "Bảo chứng uy tín từ chủ đầu tư Tasco",
+          "desc": "Bề dày kinh nghiệm kiến tạo các khu nghỉ dưỡng độc bản từ Tasco là lời cam kết cho chất lượng công trình, hệ sinh thái dịch vụ và giá trị gia tăng dài hạn."
+        },
+        {
+          "title": "Dịch vụ vận hành và an ninh chuẩn mực",
+          "desc": "Sự đồng hành của Ana Services đảm bảo hệ thống an ninh khép kín, giữ gìn cảnh quan chỉn chu và duy trì chất lượng sống cao cấp qua nhiều năm tháng."
+        },
+        {
+          "title": "Cộng đồng cư dân tinh hoa",
+          "desc": "Nơi hội tụ của những tầm vóc ưu tú cùng vị thế, gu thẩm mỹ và chuẩn mực sống, kiến tạo một môi trường sống văn minh và nền tảng kết nối bền vững."
+        }
+      ]
+    }
+  },
+  "livingSpace": {
+    "meta": {
+      "title": "Không gian sống | Viet Tri Legacy Lakeside",
+      "description": "Đặc quyền sống nghỉ dưỡng ngay thềm nhà - Hệ sinh thái tiện ích, cảnh quan và an ninh độc bản tại Việt Trì Legacy Lakeside."
+    },
+    "hero": {
+      "breadcrumbHome": "Trang chủ",
+      "breadcrumbCurrent": "Không gian sống",
+      "breadcrumbLabel": "Đường dẫn",
+      "title": "Đặc quyền sống\nnghỉ dưỡng ngay\nthềm nhà",
+      "intro": "Vượt ra khỏi khái niệm về một nơi ở thông thường, Việt Trì Legacy Lakeside kiến tạo một hệ sinh thái đặc quyền khép kín. Nơi mỗi bước chân đều chạm vào sự thư thái, mỗi tiện ích đều được cá nhân hóa để nâng niu cảm xúc và thể chất con người.",
+      "imageAlt": "Không gian sống Việt Trì Legacy Lakeside"
+    },
+    "noor": {
+      "title": "Không gian kết nối\ntrong cách biệt tĩnh tại",
+      "desc": "Được kiến tạo bởi Noor, Clubhouse tại Việt Trì Legacy Lakeside là một chốn ẩn mình điềm tĩnh — nơi cắt đứt những xô xao thường nhật để kết nối lại với chính mình và những người đồng điệu.",
+      "partnerTag": "Dấu ấn nội thất tinh hoa",
+      "items": [
+        {
+          "index": "01/",
+          "title": "Cafe Lounge",
+          "desc": "Thưởng thức những phong vị\nnhẹ nhàng, tinh tế trong\nkhông gian nghệ thuật."
+        },
+        {
+          "index": "02/",
+          "title": "Thư viện & Không gian Nghệ thuật",
+          "desc": "Góc đọc sách tĩnh lặng, điểm xuyết bởi những\nbức tranh và khu vườn xanh mát."
+        },
+        {
+          "index": "03/",
+          "title": "Wellness & Fitness",
+          "desc": "Nâng niu sức khỏe với Phòng Gym hiện đại, Yoga tĩnh tại,\nphòng Sauna thư giãn và khu vực Golf 3D cao cấp."
+        }
+      ]
+    },
+    "lj": {
+      "title": "Dòng chảy\nthiên nhiên\nthuần khiết",
+      "desc": "Hơn 6.400m2 diện tích được dành riêng cho cây xanh và mặt nước, tạo nên một vùng vi khí hậu trong lành. LJ-Group đã khéo léo đưa thiên nhiên trở thành một phần của trải nghiệm sống, len lỏi từ công viên trung tâm đến từng góc vườn tư gia.",
+      "partnerTag": "Bậc thầy kiến tạo cảnh quan",
+      "items": [
+        {
+          "title": "Lake Park & Ven hồ",
+          "desc": "Không gian dạo bộ tĩnh lặng, chòi nghỉ bên thác nước và khán đài ven hồ."
+        },
+        {
+          "title": "Khu vui chơi & Thể thao ngoài trời",
+          "desc": "Sân Pickleball thời thượng, khu thể thao đa năng và không gian gắn kết gia đình."
+        }
+      ]
+    },
+    "family": {
+      "title": "Nơi lưu giữ những\nkhoảnh khắc vô giá",
+      "desc": "Hơn cả một không gian sống, Việt Trì Legacy Lakeside là nơi những giá trị gia đình được nâng niu và sự gắn kết của một cộng đồng tinh hoa được nuôi dưỡng. Trong sự bao bọc của thiên nhiên và an ninh tuyệt đối, mỗi thế hệ đều tìm thấy một “cõi riêng” cho tâm hồn mình.",
+      "items": [
+        {
+          "index": "01/",
+          "title": "Khoảng trời tuổi thơ",
+          "desc": "Khu vui chơi trẻ em an toàn, khép kín, nơi chắp cánh cho những ký ức tuổi thơ trong trẻo giữa thiên nhiên."
+        },
+        {
+          "index": "02/",
+          "title": "Giao điểm tinh hoa",
+          "desc": "Không gian giao lưu ngoài trời và các khán đài rợp bóng mát, nơi những người hàng xóm cùng đẳng cấp chia sẻ những thú vui tao nhã"
+        },
+        {
+          "index": "03/",
+          "title": "Góc an tĩnh",
+          "desc": "Không gian thiền định riêng tư, nơi gia chủ tìm về sự cân bằng và kết nối với vượng khí cội nguồn."
+        }
+      ]
+    },
+    "ana": {
+      "title": "Riêng tư tuyệt đối",
+      "desc": "Sự riêng tư là đặc quyền tối thượng. Với mô hình Villa compound khép kín, hệ thống an ninh đa lớp 24/7 và dịch vụ quản lý vận hành chuyên nghiệp từ Ana Services, chủ nhân hoàn toàn an tâm tận hưởng cuộc sống thảnh thơi, tách biệt khỏi mọi xáo trộn của thế giới bên ngoài.",
+      "items": [
+        {
+          "text": "Cảnh quan chỉn chu và duy trì chất lượng sống cao cấp"
+        },
+        {
+          "text": "Đảm bảo hệ thống an ninh khép kín"
+        }
+      ]
+    }
+  },
+  "theVillas": {
+    "meta": {
+      "title": "Dòng sản phẩm | Viet Tri Legacy Lakeside",
+      "description": "Bộ sưu tập giới hạn 92 dinh thự đơn lập tại Việt Trì Legacy Lakeside là sự thăng hoa của nghệ thuật kiến trúc."
+    },
+    "hero": {
+      "breadcrumbHome": "Trang chủ",
+      "breadcrumbCurrent": "Dòng sản phẩm",
+      "title1": "Tuyệt tác",
+      "title2": "nơi giao hòa",
+      "desc": "Bộ sưu tập giới hạn 92 dinh thự đơn lập tại Việt Trì Legacy Lakeside là sự thăng hoa của nghệ thuật kiến trúc. Nơi thời gian lắng đọng trong từng đường nét hào hoa của Đông Dương và thiên nhiên len lỏi vào từng nhịp thở khoáng đạt của nhiệt đới.",
+      "sectionAria": "Giới thiệu dòng sản phẩm The Villas",
+      "breadcrumbAria": "Điều hướng"
+    },
+    "comparison": {
+      "titleIndochine": "Modern Indochine",
+      "subIndochine": "Dấu ấn hào hoa vượt thời gian",
+      "titleTropical": "Contemporary Tropical",
+      "subTropical": "Hơi thở nhiệt đới bên mặt hồ",
+      "comparisonAria": "So sánh thiết kế Modern Indochine và Contemporary Tropical"
+    },
+    "tropical": {
+      "title": "Contemporary Tropical - \nHơi thở nhiệt đới bên mặt hồ",
+      "desc": "Tôn vinh sự tự do và phóng khoáng, phong cách Nhiệt đới đương đại tối ưu hóa ánh sáng tự nhiên và khí trời. Thiết kế không gian mở, sử dụng hệ nan chớp gỗ và kính bản lớn giúp xóa nhòa ranh giới giữa trong và ngoài, mang thiên nhiên vào từng nhịp sống và mang đến cảm giác thư thái như một kỳ nghỉ bất tận.",
+      "imageAlt": "Phối cảnh 3D Contemporary Tropical",
+      "stats": {
+        "quantityLabel": "Số lượng",
+        "quantity": "61 dinh thự",
+        "scaleLabel": "Quy mô",
+        "scale": "3 tầng - 1 tum",
+        "areaLabel": "Diện tích",
+        "area": "240 – 469,5 m²"
+      },
+      "floorPlan": {
+        "layoutEmpty": "Trống",
+        "layoutFurnished": "Nội thất",
+        "floorLabel": "Xem tầng",
+        "modeLabel": "Mặt bằng",
+        "prefixEmpty": "Mặt bằng trống",
+        "prefixFurnished": "Mặt bằng nội thất",
+        "pinLabel": "Vị trí",
+        "diagramAlt": "Sơ đồ mặt bằng Contemporary Tropical",
+        "floors": {
+          "1": {
+            "name": "tầng 1",
+            "area": "159.1 M²",
+            "rooms": [
+              {
+                "id": "01",
+                "name": "Tiền sảnh",
+                "pin": 1
+              },
+              {
+                "id": "02",
+                "name": "Phòng khách",
+                "pin": 2
+              },
+              {
+                "id": "03",
+                "name": "Sảnh thang máy",
+                "pin": 3
+              },
+              {
+                "id": "04",
+                "name": "Phòng bếp & Phòng ăn",
+                "pin": 4
+              },
+              {
+                "id": "05",
+                "name": "Phòng giúp việc",
+                "pin": 5
+              },
+              {
+                "id": "06",
+                "name": "Phòng tắm",
+                "pin": 6
+              },
+              {
+                "id": "07",
+                "name": "Kho",
+                "pin": 7
+              }
+            ]
+          },
+          "2": {
+            "name": "tầng 2",
+            "area": "158 M²",
+            "rooms": [
+              {
+                "id": "01",
+                "name": "Sảnh thang máy",
+                "pin": 1
+              },
+              {
+                "id": "02",
+                "name": "Phòng ngủ",
+                "pin": 2
+              },
+              {
+                "id": "03",
+                "name": "Phòng thay đồ",
+                "pin": 3
+              },
+              {
+                "id": "04",
+                "name": "Phòng tắm",
+                "pin": 4
+              },
+              {
+                "id": "05",
+                "name": "Ban công",
+                "pin": 5
+              }
+            ]
+          },
+          "3": {
+            "name": "tầng 3",
+            "area": "134.9 M²",
+            "rooms": [
+              {
+                "id": "01",
+                "name": "Sảnh thang máy",
+                "pin": 1
+              },
+              {
+                "id": "02",
+                "name": "Phòng ngủ",
+                "pin": 2
+              },
+              {
+                "id": "03",
+                "name": "Phòng giặt",
+                "pin": 3
+              },
+              {
+                "id": "04",
+                "name": "Phòng thờ",
+                "pin": 4
+              },
+              {
+                "id": "05",
+                "name": "Phòng tắm",
+                "pin": 5
+              },
+              {
+                "id": "06",
+                "name": "Ban công",
+                "pin": 6
+              }
+            ]
+          }
+        }
+      }
+    },
+    "indochine": {
+      "title": "Modern Indochine - \nDấu ấn hào hoa vượt thời gian",
+      "desc": "Tôn vinh sự tinh tế và quyền quý, Modern Indochine hòa quyện hoàn hảo giữa vẻ đẹp cổ điển Pháp và bản sắc Á Đông truyền thống. Những mái vòm cong kiêu sa, chất liệu gỗ tự nhiên trầm ấm và những họa tiết điêu khắc tinh xảo tạo nên không gian sống đậm chất di sản, bền vững qua năm tháng.",
+      "imageAlt": "Phối cảnh 3D Modern Indochine",
+      "stats": {
+        "quantityLabel": "Số lượng",
+        "quantity": "31 dinh thự",
+        "scaleLabel": "Quy mô",
+        "scale": "3 tầng - 1 tum",
+        "areaLabel": "Diện tích",
+        "area": "240 – 469,5 m²"
+      },
+      "floorPlan": {
+        "layoutEmpty": "Trống",
+        "layoutFurnished": "Nội thất",
+        "floorLabel": "Xem tầng",
+        "modeLabel": "Mặt bằng",
+        "prefixEmpty": "Mặt bằng trống",
+        "prefixFurnished": "Mặt bằng nội thất",
+        "pinLabel": "Vị trí",
+        "diagramAlt": "Sơ đồ mặt bằng Modern Indochine",
+        "floors": {
+          "1": {
+            "name": "tầng 1",
+            "area": "149.6 M²",
+            "rooms": [
+              {
+                "id": "01",
+                "name": "Tiền sảnh",
+                "pin": 1
+              },
+              {
+                "id": "02",
+                "name": "Phòng khách",
+                "pin": 2
+              },
+              {
+                "id": "03",
+                "name": "Sảnh thang máy",
+                "pin": 3
+              },
+              {
+                "id": "04",
+                "name": "Phòng bếp & phòng ăn",
+                "pin": 4
+              },
+              {
+                "id": "05",
+                "name": "Phòng giúp việc",
+                "pin": 5
+              },
+              {
+                "id": "06",
+                "name": "Phòng tắm",
+                "pin": 6
+              }
+            ]
+          },
+          "2": {
+            "name": "tầng 2",
+            "area": "156 M²",
+            "rooms": [
+              {
+                "id": "01",
+                "name": "Sảnh thang máy",
+                "pin": 1
+              },
+              {
+                "id": "02",
+                "name": "Phòng ngủ",
+                "pin": 2
+              },
+              {
+                "id": "03",
+                "name": "Phòng thay đồ",
+                "pin": 3
+              },
+              {
+                "id": "04",
+                "name": "Phòng tắm",
+                "pin": 4
+              },
+              {
+                "id": "05",
+                "name": "Ban công",
+                "pin": 5
+              }
+            ]
+          },
+          "3": {
+            "name": "tầng 3",
+            "area": "125.5 M²",
+            "rooms": [
+              {
+                "id": "01",
+                "name": "Sảnh thang máy",
+                "pin": 1
+              },
+              {
+                "id": "02",
+                "name": "Phòng ngủ",
+                "pin": 2
+              },
+              {
+                "id": "03",
+                "name": "Phòng giặt",
+                "pin": 3
+              },
+              {
+                "id": "04",
+                "name": "Phòng thờ",
+                "pin": 4
+              },
+              {
+                "id": "05",
+                "name": "Phòng tắm",
+                "pin": 5
+              },
+              {
+                "id": "06",
+                "name": "Ban công",
+                "pin": 6
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

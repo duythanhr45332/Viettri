@@ -1,0 +1,452 @@
+.section {
+  position: relative;
+  width: 100%;
+  background-color: var(--bg-dark-blue);
+  /* Dark blue background from design */
+  color: var(--text-on-blue-title);
+  padding: 120px 0;
+  overflow: hidden;
+  font-family: var(--font-zalando), sans-serif;
+}
+
+.bgPattern {
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 848px;
+  height: 544px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.5;
+  /* Slight opacity adjustment if needed, the SVG has a gradient with 0.12 opacity */
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 120px;
+}
+
+/* Top Section */
+.topSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 880px;
+}
+
+.title {
+  font-size: var(--font-h2-size);
+  font-weight: var(--font-h2-weight);
+  line-height: var(--font-h2-line-height);
+  letter-spacing: var(--font-h2-ls);
+  margin: 0;
+  white-space: pre-line;
+  color: #FFFFFF;
+}
+
+.subtitle {
+  font-family: var(--font-playfair), serif;
+  font-size: var(--font-body-large-size);
+  font-weight: var(--font-body-large-weight);
+  line-height: var(--font-body-large-line-height);
+  color: rgba(175, 193, 215, 0.7);
+  margin: 0;
+}
+
+/* Partners Box Wrapper */
+.partnersBoxWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+  margin: 44px 0 48px;
+}
+
+.iconRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  line-height: 0;
+}
+
+.flipV {
+  transform: scaleY(-1);
+}
+
+.flipH {
+  transform: scaleX(-1);
+}
+
+.flipHV {
+  transform: scale(-1, -1);
+}
+
+.partnersList {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+  border: 1px solid rgba(175, 193, 215, 0.35);
+  border-radius: 2px;
+  padding: 56px 20px;
+  box-sizing: border-box;
+}
+
+.partnerItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.partnerLogo {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.watgWrapper {
+  height: 38px;
+  width: 160px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.watgImg {
+  width: 170px;
+  height: 170px;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+}
+
+.partnerImg {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.ljImg {
+  height: 36px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.noorImg {
+  height: 32px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.partnerDesc {
+  font-family: var(--font-playfair), serif;
+  font-size: var(--font-body-large-size);
+  font-weight: var(--font-body-large-weight);
+  line-height: 1.5;
+  color: rgba(175, 193, 215, 0.75);
+  margin: 0;
+  text-align: center;
+}
+
+.divider {
+  width: 1px;
+  height: 100px;
+  background-color: rgba(175, 193, 215, 0.35);
+  align-self: center;
+  flex-shrink: 0;
+}
+
+.introDesc {
+  font-family: var(--font-playfair), serif;
+  font-size: var(--font-body-large-size);
+  font-weight: var(--font-body-large-weight);
+  line-height: 1.75;
+  color: rgba(175, 193, 215, 0.7);
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+/* Bottom Section */
+.bottomSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 60px;
+}
+
+.investorHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.investorLogo {
+  width: 165px;
+  height: auto;
+}
+
+.investorTitle {
+  font-family: var(--font-zalando), sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #AFC1D7;
+  margin: 0;
+  text-align: center;
+  /* text-transform: uppercase; */
+  letter-spacing: 1px;
+}
+
+.investorSubtitle {
+  font-family: var(--font-playfair), serif;
+  font-size: var(--font-body-large-size);
+  font-weight: var(--font-body-large-weight);
+  line-height: var(--font-body-large-line-height);
+  color: rgba(175, 193, 215, 0.7);
+  margin: 0;
+  text-align: center;
+}
+
+.investorDivider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 23px;
+  width: 100%;
+}
+
+.investorLine {
+  height: 1px;
+  background-color: rgba(175, 193, 215, 0.4);
+  width: 300px;
+}
+
+.investorIconGroup {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.investorDesc {
+  font-family: var(--font-playfair), serif;
+  font-size: var(--font-body-large-size);
+  font-weight: var(--font-body-large-weight);
+  line-height: var(--font-body-large-line-height);
+  color: rgba(175, 193, 215, 0.7);
+  text-align: center;
+  max-width: 694px;
+  margin: 0 auto;
+}
+
+/* Projects List */
+.projectsList {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 32px;
+  width: 100%;
+  height: 520px;
+}
+
+.projectItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  height: 100%;
+}
+
+.projectImageWrapper {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  overflow: hidden;
+}
+
+.projectImage {
+  object-fit: cover;
+}
+
+.projectTitle {
+  font-size: var(--font-h5-size);
+  font-weight: var(--font-h5-weight);
+  line-height: var(--font-h5-line-height);
+  margin: 0;
+  color: var(--text-on-blue-title);
+  text-align: center;
+  white-space: pre-line;
+}
+
+.projectText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  height: 100px;
+}
+
+.projectLocation {
+  font-family: var(--font-playfair), serif;
+  font-size: var(--font-body-size);
+  font-weight: var(--font-body-weight);
+  line-height: var(--font-body-line-height);
+  color: rgba(175, 193, 215, 0.7);
+  margin: 0;
+  text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .projectsList {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .projectItem {
+    height: 520px;
+  }
+
+  .projectImageWrapper {
+    min-height: 300px;
+    /* Ensure flex item doesn't collapse to 0 */
+  }
+
+  .investorLine {
+    width: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+    gap: 48px;
+  }
+
+  .header {
+    gap: 10px;
+  }
+
+  .title {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* Partners Box Wrapper on Mobile */
+  .partnersBoxWrapper {
+    width: 100%;
+    max-width: 320px;
+    margin: 28px auto 32px;
+    gap: 14px;
+  }
+
+  .iconRow svg {
+    width: 44px;
+    height: 23px;
+  }
+
+  .partnersList {
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 16px;
+    gap: 20px;
+    border: 1px solid rgba(175, 193, 215, 0.35);
+    border-radius: 2px;
+    box-sizing: border-box;
+  }
+
+  .partnerItem {
+    width: 100%;
+    padding: 0;
+    gap: 12px;
+  }
+
+  .partnerLogo {
+    height: 28px;
+  }
+
+  .watgWrapper {
+    height: 24px;
+    width: 86px;
+  }
+
+  .watgImg {
+    width: 86px;
+    height: 86px;
+  }
+
+  .ljImg {
+    height: 20px;
+    width: auto;
+  }
+
+  .noorImg {
+    height: 16px;
+    width: auto;
+  }
+
+  .partnerDesc {
+    font-size: 13.5px;
+    line-height: 1.45;
+  }
+
+  .divider {
+    width: 76px;
+    height: 1px;
+    background-color: rgba(175, 193, 215, 0.35);
+    margin: 4px auto;
+    align-self: center;
+    flex-shrink: 0;
+  }
+
+  .introDesc {
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 0 10px;
+  }
+
+  .projectsList {
+    gap: 40px;
+  }
+
+  .investorDivider {
+    display: none;
+  }
+}

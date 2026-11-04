@@ -1,0 +1,281 @@
+.section {
+  position: relative;
+  width: 100%;
+  background-color: #1c2e15;
+  overflow: hidden;
+  color: var(--text-on-green-title, #e1d8c4);
+}
+
+.bgOverlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bgTexture {
+  object-fit: cover;
+  mix-blend-mode: overlay;
+  opacity: 0.7;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-width, 1440px);
+  margin: 0 auto;
+  padding: 120px 40px 60px;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 48px;
+  width: 100%;
+}
+
+.titleCol {
+  flex: 1;
+  max-width: 524px;
+}
+
+.title {
+  font-family: var(--font-zalando), sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.48;
+  letter-spacing: -0.32px;
+  color: var(--text-on-green-title, #e1d8c4);
+  margin: 0;
+  white-space: pre-line;
+}
+
+.partnerCol {
+  width: 471px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.partnerDesc {
+  font-family: var(--font-playfair), serif;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--text-on-green-body, rgba(225, 216, 196, 0.7));
+  margin: 0;
+}
+
+.partnerDivider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(225, 216, 196, 0.25);
+}
+
+.partnerBranding {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ljLogoWrapper {
+  height: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.ljLogo {
+  height: 26px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(0.9) sepia(0.2) saturate(2);
+}
+
+.partnerTag {
+  font-family: var(--font-playfair), serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--text-on-green-title, #e1d8c4);
+  margin: 0;
+}
+
+.flourishCol {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 8px;
+}
+
+.flourishSvg {
+  width: 46px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.sectionDivider {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(225, 216, 196, 0.2);
+}
+
+/* 2-Column Cards — cùng container với các section khác */
+.cardsContainer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  max-width: var(--max-width, 1440px);
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.card {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 80px;
+  box-sizing: border-box;
+}
+
+/* Cạnh ngoài thẳng hàng mép nội dung container (giống header) */
+.card:first-child {
+  padding-left: 0;
+}
+
+.card:last-child {
+  padding-right: 0;
+}
+
+.verticalDivider {
+  width: 1px;
+  background-color: rgba(225, 216, 196, 0.2);
+  flex-shrink: 0;
+}
+
+.cardImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+}
+
+.cardImage {
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover .cardImage {
+  transform: scale(1.04);
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cardTitle {
+  font-family: var(--font-zalando), sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  color: var(--text-on-green-title, #e1d8c4);
+  margin: 0;
+}
+
+.cardDesc {
+  font-family: var(--font-playfair), serif;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--text-on-green-body, rgba(225, 216, 196, 0.7));
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .container {
+    padding: 80px 40px 40px;
+  }
+
+  .card {
+    padding: 40px;
+  }
+
+  .card:first-child {
+    padding-left: 0;
+  }
+
+  .card:last-child {
+    padding-right: 0;
+  }
+
+  .cardImageWrapper {
+    height: 360px;
+  }
+}
+
+@media (max-width: 860px) {
+  .header {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .partnerCol {
+    width: 100%;
+  }
+
+  .flourishCol {
+    align-self: flex-start;
+  }
+
+  .cardsContainer {
+    flex-direction: column;
+  }
+
+  .verticalDivider {
+    width: 100%;
+    height: 1px;
+  }
+
+  .card,
+  .card:first-child,
+  .card:last-child {
+    padding: 40px 0;
+  }
+
+  .cardImageWrapper {
+    height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container,
+  .cardsContainer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 60px 20px 32px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .partnerDesc,
+  .cardDesc {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
