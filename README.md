@@ -1,93 +1,168 @@
-# Việt Trì
+# Kiến trúc Hệ thống Dự án Việt Trì Legacy Lakeside (System Architecture)
 
+Tài liệu này mô tả chi tiết kiến trúc tổng thể, hạ tầng và luồng dữ liệu của dự án **Việt Trì Legacy Lakeside**, được thiết kế và triển khai theo mô hình **Headless Architecture (Decoupled CMS)**.
 
+---
 
-## Getting started
+## 1. Tổng quan Kiến trúc (Architectural Overview)
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+Dự án tách biệt hoàn toàn giữa hai thành phần chính:
+- **Tầng Trình diễn (Presentation Layer - Frontend):** Được xây dựng bằng Next.js hiện đại để mang lại hiệu năng cao nhất, tối ưu trải nghiệm người dùng (UX) và chuẩn SEO.
+- **Tầng Quản trị Nội dung (Content Management Layer - Backend):** Sử dụng WordPress như một Headless CMS, cung cấp dữ liệu qua GraphQL API mà không can thiệp vào mã nguồn giao diện.
+- **Tầng Định tuyến & Hạ tầng (Infrastructure & Routing Layer):** Được đóng gói hoàn chỉnh bằng Docker & Docker Compose, sử dụng Nginx làm Reverse Proxy duy nhất điều phối toàn bộ lưu lượng mạng.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+```mermaid
+flowchart TD
+    subgraph Client["Trình duyệt / Người dùng (Client)"]
+        User["Khách truy cập Web / Admin"]
+    end
 
-## Add your files
+    subgraph Gateway["Reverse Proxy (Nginx Container :3035)"]
+        Nginx{"Nginx Routing Rules"}
+    end
 
-* [Create](https://docs.gitlab.com/user/project/repository/web_editor/#create-a-file) or [upload](https://docs.gitlab.com/user/project/repository/web_editor/#upload-a-file) files
-* [Add files using the command line](https://docs.gitlab.com/topics/git/add_files/#add-files-to-a-git-repository) or push an existing Git repository with the following command:
+    subgraph FrontendCluster["Frontend Container (Next.js :3037)"]
+        NextServer["Next.js 16 Server (App Router)"]
+        NextPages["SSR / SSG / ISR Engine"]
+        NextServer --> NextPages
+    end
 
+    subgraph BackendCluster["Backend Container (WordPress :80)"]
+        WPAdmin["WordPress Admin Panel\n(/wp-admin)"]
+        WPGraphQL["WPGraphQL Engine\n(/graphql)"]
+        WPUploads["Thư viện Media\n(/wp-content/uploads)"]
+    end
+
+    subgraph Storage["Cơ sở Dữ liệu & Lưu trữ (Storage)"]
+        MySQL[("MySQL Database\n192.168.1.227:33063")]
+        VolUploads["Docker Volume:\nviettri_uploads_staging"]
+    end
+
+    %% Routing
+    User -->|HTTP / HTTPS Request| Nginx
+    Nginx -->|/wp-admin, /graphql, /wp-content...| BackendCluster
+    Nginx -->|Tất cả Request còn lại /| FrontendCluster
+
+    %% Data Fetching
+    NextServer -.->|GraphQL Query\n(NEXT_PUBLIC_WORDPRESS_URL)| WPGraphQL
+    WPAdmin --> MySQL
+    WPGraphQL --> MySQL
+    WPUploads <--> VolUploads
 ```
-cd existing_repo
-git remote add origin https://git.danishsoftware.com/website/viettri.git
-git branch -M main
-git push -uf origin main
+
+---
+
+## 2. Chi tiết các Tầng Thành phần
+
+### 2.1. Frontend: Next.js 16 & React 19
+- **Framework & Công nghệ cốt lõi:**
+  - **Next.js 16 (App Router):** Hỗ trợ kiến trúc module hóa với thư mục `src/app/[lang]/`, hỗ trợ render linh hoạt theo cơ chế Server-Side Rendering (SSR) cho SEO và Static Site Generation (SSG) cho tốc độ tải tức thì.
+  - **React 19 & TypeScript:** Đảm bảo type safety, hỗ trợ Server Components, Client Components (`'use client'`) và tối ưu hiệu năng render.
+  - **Turbopack:** Tối ưu hóa quá trình build và fast-refresh trong môi trường phát triển.
+- **Hệ thống Design & Styling:**
+  - Sử dụng hệ thống Design Tokens tập trung trong [globals.css](file:///c:/viettri/viettri/frontend/src/app/globals.css) (màu sắc HSL, phông chữ Zalando Sans Expanded, Playfair Display, kích thước container chuẩn).
+  - Phân tách CSS scoped theo CSS Modules (`*.module.css`) nhằm tránh xung đột style và tăng tính tái sử dụng.
+- **Đa ngôn ngữ (i18n):**
+  - Cấu trúc thư mục theo Dynamic Route `/[lang]/` (hỗ trợ `vi` và `en`).
+  - Hệ thống từ điển JSON (`vi.json`, `en.json`) được nạp server-side thông qua [dictionaries.ts](file:///c:/viettri/viettri/frontend/src/dictionaries.ts).
+
+### 2.2. Backend / CMS: WordPress Headless
+- **Vai trò:**
+  - Đóng vai trò là **Content Engine**: Quản lý tin tức, sự kiện, thông tin dự án, danh mục tiện ích và thư viện hình ảnh/media.
+  - Cung cấp giao diện trực quan thân thiện (`/wp-admin`) cho biên tập viên và đội ngũ marketing thao tác nội dung mà không cần can thiệp vào source code.
+- **Giao tiếp Dữ liệu (API):**
+  - Tích hợp plugin **WPGraphQL** để mở endpoint `/graphql`.
+  - Frontend gọi dữ liệu thông qua biến môi trường `NEXT_PUBLIC_WORDPRESS_URL=https://viettrilegacylakeside.vn/graphql`.
+  - Phương thức GraphQL giúp Frontend chỉ truy vấn đúng các trường dữ liệu cần thiết (tránh over-fetching), giảm tải băng thông và tăng tốc độ phản hồi.
+- **Lưu trữ dữ liệu:**
+  - Cơ sở dữ liệu: Kết nối MySQL Server bên ngoài (`WORDPRESS_DB_HOST: 192.168.1.227:33063`).
+  - Media & Tệp tải lên: Lưu trữ bền vững qua Docker Named Volume `viettri_uploads_staging`.
+
+### 2.3. Hạ tầng & Mạng: Docker & Nginx Reverse Proxy
+Toàn bộ hệ thống chạy trên nền tảng Docker với cấu hình tại [docker-compose.staging.yml](file:///c:/viettri/viettri/docker-compose.staging.yml) và [nginx.staging.conf](file:///c:/viettri/viettri/nginx.staging.conf):
+
+#### Bảng cấu hình các Container Service:
+
+| Service | Container Name | Port Mapping | Chức năng chính |
+| :--- | :--- | :--- | :--- |
+| **`nginx`** | `viettri_nginx_staging` | `3035:80` | Reverse Proxy cổng vào, phân luồng request theo URI |
+| **`frontend`** | `viettri_frontend_staging` | Nội bộ mạng Docker | Ứng dụng Next.js SSR, lắng nghe cổng nội bộ `3037` |
+| **`wordpress`**| `viettri_wordpress_staging` | `3036:80` (Direct) | WordPress CMS, phục vụ `/wp-admin` và `/graphql` |
+
+#### Cơ chế Phân luồng của Nginx ([nginx.staging.conf](file:///c:/viettri/viettri/nginx.staging.conf)):
+1. **Luồng WordPress CMS & API:**
+   ```nginx
+   location ~ ^/(wp-admin|wp-includes|wp-content|wp-json|wp-login\.php|graphql) {
+       proxy_pass http://wordpress:80;
+   }
+   location ~ \.php$ {
+       proxy_pass http://wordpress:80;
+   }
+   ```
+   *Mọi yêu cầu truy cập trang quản trị, tệp media upload, tệp PHP hoặc truy vấn GraphQL đều được chuyển trực tiếp đến container WordPress.*
+
+2. **Luồng Frontend:**
+   ```nginx
+   location / {
+       proxy_pass http://frontend:3037;
+   }
+   ```
+   *Tất cả các route hiển thị cho người dùng cuối (`/`, `/about`, `/vi/...`, `/en/...`) đều được Nginx ủy quyền cho Next.js xử lý.*
+
+3. **Tối ưu kết nối & Tải tệp:**
+   - `client_max_body_size 64M`: Cho phép tải lên các tệp media có dung lượng lớn vào CMS.
+   - `proxy_read_timeout 300`: Giữ kết nối ổn định cho các tác vụ xử lý ảnh hoặc build nặng.
+   - Thiết lập đầy đủ header chuyển tiếp (`Host`, `X-Real-IP`, `X-Forwarded-For`, `X-Forwarded-Proto`) giúp WordPress nhận diện đúng giao thức HTTPS gốc.
+
+---
+
+## 3. Luồng Dữ liệu Điển hình (Request & Data Flow)
+
+### Luồng 1: Người dùng truy cập trang Web (Next.js SSR)
+1. Người dùng gửi request `GET https://viettrilegacylakeside.vn/about`.
+2. Nginx nhận request tại cổng công khai, so khớp thấy không thuộc tiền tố WordPress -> Forward sang `http://frontend:3037`.
+3. Next.js Server thực thi logic trang (nạp từ điển đa ngôn ngữ, nếu có tin tức động sẽ gọi GraphQL query sang `http://wordpress/graphql`).
+4. Next.js hoàn thiện HTML & CSS (SSR) và phản hồi lại Nginx -> Trả về trình duyệt người dùng với First Contentful Paint (FCP) tối ưu.
+
+### Luồng 2: Quản trị viên cập nhật bài viết / Tin tức
+1. Biên tập viên truy cập `https://viettrilegacylakeside.vn/wp-admin`.
+2. Nginx nhận diện tiền tố `/wp-admin` -> Chuyển tiếp request đến `http://wordpress:80`.
+3. Biên tập viên đăng nhập, chỉnh sửa nội dung và tải ảnh lên. Dữ liệu văn bản được ghi vào MySQL DB; tệp ảnh lưu vào volume `viettri_uploads_staging`.
+4. Khi bài viết được công bố, Next.js truy vấn dữ liệu mới qua endpoint `/graphql` và cập nhật tức thì trên giao diện website.
+
+---
+
+## 4. Ưu điểm của Kiến trúc
+
+1. **Hiệu năng & Tối ưu SEO vượt trội:**
+   - Tầng hiển thị hoàn toàn do Next.js đảm nhiệm với mã nguồn tối ưu, loại bỏ tình trạng cồng kềnh thường gặp của các theme WordPress truyền thống.
+   - Điểm số Core Web Vitals cao nhờ khả năng nén ảnh (`next/image`), tối ưu font cục bộ và SSR.
+2. **Bảo mật cao (Security Hardening):**
+   - Khách truy cập thông thường chỉ tương tác với ứng dụng Node.js/Next.js, không tiếp cận trực tiếp cấu trúc thư mục hoặc file nguồn PHP của WordPress.
+   - Giảm thiểu tối đa nguy cơ bị tấn công qua lỗ hổng plugin hay database injection trên giao diện người dùng.
+3. **Trải nghiệm biên tập thân thiện:**
+   - Tận dụng hệ sinh thái quản lý bài viết, phân quyền biên tập viên và media phong phú của WordPress.
+4. **Khả năng mở rộng (Scalability):**
+   - Dễ dàng nâng cấp hoặc mở rộng cụm Frontend (scale nhiều container Next.js) độc lập với cụm CMS khi lượng truy cập tăng đột biến.
+
+---
+
+## 5. Hướng dẫn Vận hành & Triển khai
+
+### Khởi chạy môi trường Staging
+Tại thư mục gốc dự án:
+```bash
+# Khởi chạy toàn bộ hệ thống ở chế độ daemon
+docker compose -f docker-compose.staging.yml up -d --build
+
+# Kiểm tra trạng thái các container
+docker compose -f docker-compose.staging.yml ps
+
+# Xem log theo thời gian thực
+docker compose -f docker-compose.staging.yml logs -f
 ```
 
-## Integrate with your tools
-
-* [Set up project integrations](https://git.danishsoftware.com/website/viettri/-/settings/integrations)
-
-## Collaborate with your team
-
-* [Invite team members and collaborators](https://docs.gitlab.com/user/project/members/)
-* [Create a new merge request](https://docs.gitlab.com/user/project/merge_requests/creating_merge_requests/)
-* [Automatically close issues from merge requests](https://docs.gitlab.com/user/project/issues/managing_issues/#closing-issues-automatically)
-* [Enable merge request approvals](https://docs.gitlab.com/user/project/merge_requests/approvals/)
-* [Set auto-merge](https://docs.gitlab.com/user/project/merge_requests/auto_merge/)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-* [Get started with GitLab CI/CD](https://docs.gitlab.com/ci/quick_start/)
-* [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/user/application_security/sast/)
-* [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/topics/autodevops/requirements/)
-* [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/user/clusters/agent/)
-* [Set up protected environments](https://docs.gitlab.com/ci/environments/protected_environments/)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+### Kiểm tra dịch vụ
+- **Giao diện Website:** `http://<SERVER_IP>:3035/`
+- **Trang Quản trị WordPress:** `http://<SERVER_IP>:3035/wp-admin/`
+- **GraphQL Endpoint:** `http://<SERVER_IP>:3035/graphql`
